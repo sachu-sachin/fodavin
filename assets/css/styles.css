@@ -19768,8 +19768,930 @@ ul {
 
 /* Custom Grid Background */
 .bg-grid {
+  background-repeat: repeat;
+  background-position: 0 0;
   background-size: 40px 40px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
 }
 @media (max-width: 991.98px) { .responsive-stats-card { position: relative !important; margin-top: 2rem !important; margin-left: 0 !important; margin-bottom: 2rem !important; } }
+
+/* Portfolio cards: keep the top of a full-page screenshot visible when cropped */
+.portfolio-img.portfolio-img-top > img {
+  object-position: top center;
+}
+
+/* Project detail banner */
+.project-banner {
+  position: relative;
+  min-height: 660px;
+  overflow: hidden;
+  background-color: var(--bs-white);
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 991.98px) {
+  .project-banner {
+    min-height: 560px;
+  }
+}
+
+.project-banner .project-breadcrumb a,
+.project-banner .project-breadcrumb span {
+  color: rgba(31, 42, 46, 0.65);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-banner .project-breadcrumb a:hover {
+  color: var(--bs-primary);
+}
+
+.project-banner .project-breadcrumb .current {
+  color: var(--bs-dark);
+  font-weight: 600;
+}
+
+.project-banner .project-tag {
+  border: 1px solid rgba(31, 42, 46, 0.18);
+  color: var(--bs-dark);
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+  font-size: 0.875rem;
+}
+
+.project-banner .project-meta-strip {
+  border-top: 1px solid rgba(31, 42, 46, 0.14);
+}
+
+.project-banner .project-meta-strip .project-meta-label {
+  color: rgba(31, 42, 46, 0.6);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-banner .project-meta-strip .project-meta-value {
+  color: var(--bs-dark);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Project gallery shots */
+.project-shot {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--bs-light-gray);
+  border: 1px solid rgba(31, 42, 46, 0.08);
+}
+
+.project-shot > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ------------------------------------------------------------------
+   Header: glass backdrop + desktop inline navigation
+------------------------------------------------------------------ */
+
+/* Glassy amber bar once the page is scrolled (replaces the solid fill) */
+.header.fixed-header {
+  background-color: rgba(var(--bs-primary-rgb), 0.65);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(31, 42, 46, 0.14);
+}
+
+/* Browsers without backdrop-filter keep the original solid primary */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .header.fixed-header {
+    background-color: var(--bs-primary);
+  }
+}
+
+/* Inline menu, revealed from xl up.
+   The list itself is a glass capsule so the dark links stay legible over any
+   banner - the hero is white, the projects banner is pale, about-us is dark. */
+.header-nav .header-menu-inline {
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 24px rgba(31, 42, 46, 0.10);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Once the bar itself is glass the capsule would double up, so it dissolves */
+.header.fixed-header .header-nav .header-menu-inline {
+  background-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .header-nav .header-menu-inline {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.header-nav .header-link-inline {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--bs-dark);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-nav .header-link-inline:hover {
+  background-color: rgba(31, 42, 46, 0.08);
+}
+
+.header-nav .header-link-inline.active {
+  background-color: var(--bs-primary);
+  color: var(--bs-dark) !important;
+}
+
+/* Over the glass bar the links flip to dark, so the active pill flips too */
+.header.fixed-header .header-nav .header-link-inline {
+  color: var(--bs-dark);
+}
+
+.header.fixed-header .header-nav .header-link-inline:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.header.fixed-header .header-nav .header-link-inline.active {
+  background-color: var(--bs-dark);
+  color: var(--bs-white) !important;
+}
+
+/* Active item inside the mobile dropdown */
+.header .header-menu .header-item .header-link.active {
+  color: var(--bs-dark) !important;
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------
+   Footer
+------------------------------------------------------------------ */
+
+.footer .footer-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bs-white);
+}
+
+.footer .footer-heading::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  background-color: var(--bs-primary);
+}
+
+.footer .footer-link {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer .footer-link:hover {
+  color: var(--bs-primary);
+}
+
+.footer .footer-note {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.footer .footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-btn-outline {
+  color: var(--bs-white);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer .footer-btn-outline:hover {
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+.footer .footer-btn-solid {
+  background-color: var(--bs-primary);
+  color: var(--bs-dark);
+  border-color: var(--bs-primary);
+}
+
+.footer .footer-btn-solid:hover {
+  background-color: var(--bs-white);
+  border-color: var(--bs-white);
+  color: var(--bs-dark);
+}
+
+/* Newsletter field */
+.footer .footer-newsletter .form-control {
+  padding: 0.85rem 1rem;
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--bs-white);
+}
+
+.footer .footer-newsletter .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.footer .footer-newsletter .form-control:focus {
+  background-color: transparent;
+  border-color: var(--bs-primary);
+  box-shadow: none;
+  color: var(--bs-white);
+}
+
+/* Social buttons */
+.footer .footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-social:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-dark);
+  transform: translateY(-3px);
+}
+
+/* Outlined wordmark */
+.footer .footer-wordmark {
+  margin-top: 4rem;
+}
+
+.footer .footer-wordmark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .footer .footer-wordmark {
+    margin-top: 2.5rem;
+  }
+}
+
+/* Legal bar */
+.footer .footer-bottom {
+  margin-top: 3rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer .footer-legal .footer-sep {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background-color: var(--bs-primary);
+}
+
+/* ------------------------------------------------------------------
+   Forms: status messaging + spam honeypot
+------------------------------------------------------------------ */
+
+/* Off-screen rather than display:none so bots still see and fill it. */
+.fodavin-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status-success {
+  color: #1a7f4b;
+}
+
+.form-status-error {
+  color: #c0392b;
+}
+
+.form-status-info {
+  color: rgba(31, 42, 46, 0.75);
+}
+
+/* On the dark footer the same states need lighter tones */
+.footer .form-status-success {
+  color: #6ee7a8;
+}
+
+.footer .form-status-error {
+  color: #ff9b8f;
+}
+
+.footer .form-status-info {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer .footer-newsletter [type="submit"][disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ==================================================================
+   Admin dashboard
+================================================================== */
+
+.admin-body {
+  background-color: #F1F5F7;
+  min-height: 100vh;
+}
+
+/* ---- Top bar ---- */
+.admin-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 0.875rem 0;
+  background-color: rgba(255, 255, 255, 0.88);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+  border-top: 4px solid var(--bs-primary);
+  border-bottom: 1px solid rgba(31, 42, 46, 0.09);
+}
+
+.admin-tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50rem;
+  background-color: var(--bs-primary);
+  color: var(--bs-dark);
+}
+
+.admin-link {
+  color: rgba(31, 42, 46, 0.7);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.admin-link:hover {
+  color: var(--bs-dark);
+}
+
+.admin-card {
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.08);
+  border-radius: 1rem;
+}
+
+/* ---- Login ---- */
+.admin-auth {
+  min-height: calc(100vh - 220px);
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+}
+
+.admin-auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 60px rgba(31, 42, 46, 0.1);
+}
+
+@media (max-width: 575.98px) {
+  .admin-auth-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 1rem;
+  }
+}
+
+.admin-auth-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--bs-primary);
+  color: var(--bs-dark);
+  margin-bottom: 1.5rem;
+}
+
+.admin-password-wrap {
+  position: relative;
+}
+
+.admin-password-wrap .form-control {
+  padding-inline-end: 3rem;
+}
+
+.admin-password-toggle {
+  position: absolute;
+  inset-inline-end: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: rgba(31, 42, 46, 0.55);
+  cursor: pointer;
+}
+
+.admin-password-toggle:hover {
+  background-color: rgba(31, 42, 46, 0.06);
+  color: var(--bs-dark);
+}
+
+.admin-auth-note {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.8125rem;
+  color: rgba(31, 42, 46, 0.5);
+}
+
+/* ---- Spinner shared by login + refresh ---- */
+.admin-spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: admin-spin 0.7s linear infinite;
+  vertical-align: -0.125em;
+}
+
+@keyframes admin-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-spinner {
+    animation-duration: 2s;
+  }
+}
+
+/* ---- Stat tiles ---- */
+.admin-stat {
+  height: 100%;
+  padding: 1.25rem;
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.08);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-stat-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
+  background-color: rgba(31, 42, 46, 0.06);
+  color: var(--bs-dark);
+}
+
+.admin-stat-accent .admin-stat-icon {
+  background-color: var(--bs-primary);
+}
+
+.admin-stat-label {
+  margin-bottom: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(31, 42, 46, 0.5);
+}
+
+.admin-stat-value {
+  margin-bottom: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--bs-dark);
+}
+
+/* ---- Table (desktop) ---- */
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Not sticky: .admin-table-wrap is an overflow-x scroll container, so a sticky
+   thead offsets from the container, not the viewport - it lands on top of row 1. */
+.admin-table thead th {
+  background-color: #FAFCFD;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(31, 42, 46, 0.5);
+  border-bottom: 1px solid rgba(31, 42, 46, 0.1);
+  padding: 0.875rem 1rem;
+  white-space: nowrap;
+}
+
+.admin-table tbody td {
+  padding: 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(31, 42, 46, 0.06);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.admin-table tbody tr:hover {
+  background-color: rgba(251, 178, 63, 0.05);
+}
+
+.admin-table tbody tr.is-busy {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.admin-table a {
+  color: var(--bs-dark);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.admin-table a:hover {
+  color: #b57b16;
+  text-decoration: underline;
+}
+
+.admin-from-name {
+  font-weight: 700;
+  color: var(--bs-dark);
+}
+
+.admin-message-cell {
+  max-width: 420px;
+  min-width: 260px;
+}
+
+.admin-message {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.admin-message.is-clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.admin-more {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #b57b16;
+  cursor: pointer;
+}
+
+.admin-meta {
+  font-size: 0.8125rem;
+  color: rgba(31, 42, 46, 0.5);
+}
+
+/* ---- Pills ---- */
+.admin-type,
+.admin-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.admin-type {
+  border: 1px solid rgba(31, 42, 46, 0.15);
+  background-color: rgba(31, 42, 46, 0.03);
+}
+
+.admin-type-contact {
+  background-color: rgba(251, 178, 63, 0.18);
+  border-color: rgba(251, 178, 63, 0.55);
+}
+
+.badge-new {
+  background-color: var(--bs-primary);
+  color: var(--bs-dark);
+}
+
+.badge-read {
+  background-color: rgba(31, 42, 46, 0.1);
+  color: var(--bs-dark);
+}
+
+.badge-replied {
+  background-color: #d6f5e3;
+  color: #14663c;
+}
+
+.badge-archived {
+  background-color: rgba(31, 42, 46, 0.06);
+  color: rgba(31, 42, 46, 0.5);
+}
+
+/* ---- Row actions ---- */
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.admin-act {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(31, 42, 46, 0.15);
+  background-color: var(--bs-white);
+  color: var(--bs-dark);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-act:hover {
+  border-color: var(--bs-dark);
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+}
+
+.admin-act-danger:hover {
+  border-color: #c0392b;
+  background-color: #c0392b;
+}
+
+/* ---- Toast ---- */
+.admin-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translate(-50%, 200%);
+  z-index: 60;
+  max-width: min(92vw, 460px);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+  font-size: 0.9375rem;
+  box-shadow: 0 18px 40px rgba(31, 42, 46, 0.28);
+  transition: transform 0.35s ease-in-out;
+}
+
+.admin-toast.is-visible {
+  transform: translate(-50%, 0);
+}
+
+.admin-toast-error {
+  background-color: #c0392b;
+}
+
+/* ---- Loading skeleton ---- */
+.admin-skeleton-row {
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(31, 42, 46, 0.07) 25%, rgba(31, 42, 46, 0.13) 37%, rgba(31, 42, 46, 0.07) 63%);
+  background-size: 400% 100%;
+  animation: admin-shimmer 1.3s ease-in-out infinite;
+}
+
+@keyframes admin-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* ==================================================================
+   Stacked cards below lg - a 6-column table cannot work on a phone
+================================================================== */
+@media (max-width: 991.98px) {
+  .admin-table-wrap {
+    overflow-x: visible;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .admin-table,
+  .admin-table tbody,
+  .admin-table tr,
+  .admin-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .admin-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .admin-table tbody tr {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.25rem;
+    background-color: var(--bs-white);
+    border: 1px solid rgba(31, 42, 46, 0.08);
+    border-radius: 1rem;
+  }
+
+  .admin-table tbody td {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    padding: 0.6rem 1rem;
+    border-bottom: 0;
+  }
+
+  .admin-table tbody td::before {
+    content: attr(data-label);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(31, 42, 46, 0.45);
+    padding-top: 0.15rem;
+  }
+
+  .admin-message-cell {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .admin-table tbody tr:hover {
+    background-color: var(--bs-white);
+  }
+}
+
+@media (max-width: 479.98px) {
+  .admin-table tbody td {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .admin-auth {
+    min-height: auto;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Admin form fields
+
+   The site theme renders inputs as bare underlines and ships
+   `border: var(--bs-border-width) solid 0` - an invalid shorthand, so the
+   border is dropped and the field is invisible. Admin needs real boxes.
+------------------------------------------------------------------ */
+
+.admin-body .form-control,
+.admin-body .form-select {
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  color: var(--bs-dark);
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.18);
+  border-radius: 0.625rem;
+  box-shadow: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.admin-body .form-select {
+  padding-inline-end: 2.75rem;
+  background-position: right 1rem center;
+}
+
+.admin-body .form-control::placeholder {
+  color: rgba(31, 42, 46, 0.4);
+  opacity: 1;
+}
+
+.admin-body .form-control:hover,
+.admin-body .form-select:hover {
+  border-color: rgba(31, 42, 46, 0.32);
+}
+
+.admin-body .form-control:focus,
+.admin-body .form-select:focus {
+  outline: none;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 3px rgba(251, 178, 63, 0.28);
+}
+
+.admin-body .form-label {
+  margin-bottom: 0.4rem;
+  font-size: 0.8125rem;
+  color: var(--bs-dark);
+}
+
+/* Must follow the block above, or the general rule wins on source order and
+   the eye toggle sits on top of the typed characters. */
+.admin-body .admin-password-wrap .form-control {
+  padding-inline-end: 3.25rem;
+}
+
+/* Search field: strip the native clear button so it does not collide */
+.admin-body input[type="search"]::-webkit-search-decoration,
+.admin-body input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Filter card was over-padded for the amount it holds */
+.admin-filters .form-label {
+  white-space: nowrap;
+}

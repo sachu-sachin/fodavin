@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FODAVIN</title>
+  <title>Projects | Fodavin Technologies</title>
+  <meta name="description" content="Case studies from Fodavin Technologies: LIMS dashboards, learning platforms, B2B logistics sites, fashion eCommerce and real estate discovery.">
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg" />
   <link rel="stylesheet" href="../assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
@@ -16,21 +17,35 @@
   <!-- Header -->
   <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
     <div class="container">
-      <div class="header-wrapper d-flex align-items-center justify-content-between">
+      <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
         <div class="logo">
           <a href="index.html" class="logo-white" style="display: none;">
-            <img src="../assets/images/logos/logo-white.svg" alt="logo" class="img-fluid" width="160">
+            <img src="../assets/images/logos/logo-white.svg" alt="Fodavin Technologies" class="img-fluid" width="160">
           </a>
           <a href="index.html" class="logo-dark" style="display: block;">
-            <img src="../assets/images/logos/logo-dark.svg" alt="logo" class="img-fluid" width="160">
+            <img src="../assets/images/logos/logo-dark.svg" alt="Fodavin Technologies" class="img-fluid" width="160">
           </a>
         </div>
+
+        <!-- Desktop navigation: revealed from xl up, replaced by the hamburger below that -->
+        <nav class="header-nav d-none d-xl-block" aria-label="Primary">
+          <ul class="header-menu-inline list-unstyled mb-0 d-flex align-items-center gap-1">
+            <li><a href="index.html" data-nav="home" class="header-link-inline">Home</a></li>
+            <li><a href="about-us.html" data-nav="about" class="header-link-inline">About</a></li>
+            <li><a href="projects.html" data-nav="projects" class="header-link-inline">Projects</a></li>
+            <li><a href="services.html" data-nav="services" class="header-link-inline">Services</a></li>
+            <li><a href="contact.html" data-nav="contact" class="header-link-inline">Contact</a></li>
+          </ul>
+        </nav>
+
         <div class="d-flex align-items-center gap-4">
 
-          <div class="btn-group">
+          <!-- Hamburger: small screens only -->
+          <div class="btn-group d-xl-none">
             <button
               class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
-              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
+              aria-label="Open menu">
               <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
             </button>
             <ul class="dropdown-menu dropdown-menu-end p-4">
@@ -42,33 +57,32 @@
                 <div class="d-flex flex-column gap-3">
                   <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
                     <li class="header-item">
-                      <a href="index.html" aria-current="true"
-                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
+                      <a href="index.html" data-nav="home"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
                           src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
                           class="img-fluid animate-spin">Home</a>
                     </li>
                     <li class="header-item">
-                      <a href="about-us.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                      <a href="about-us.html" data-nav="about"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
                           src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
                           class="img-fluid animate-spin">About</a>
                     </li>
                     <li class="header-item">
-                      <a href="projects.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                      <a href="projects.html" data-nav="projects"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
                           src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
                           class="img-fluid animate-spin">Projects</a>
                     </li>
                     <li class="header-item">
-                      <a href="blog.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Blog</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                      <a href="services.html" data-nav="services"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
                           src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
                           class="img-fluid animate-spin">Services</a>
                     </li>
                     <li class="header-item">
-                      <a href="contact.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                      <a href="contact.html" data-nav="contact"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
                           src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
                           class="img-fluid animate-spin">Contact</a>
                     </li>
@@ -92,8 +106,7 @@
   <div class="page-wrapper overflow-hidden">
 
     <!--  Banner Section -->
-    <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end"
-      style="background-image: url(../assets/images/backgrounds/projects-banner.jpg);">
+    <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end bg-white bg-grid">
       <div class="container">
         <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
           <div class="row align-items-center">
@@ -101,16 +114,17 @@
               <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
                 data-aos-duration="1000">
                 <img src="../assets/images/svgs/primary-leaf.svg" alt="" class="img-fluid animate-spin">
-                <p class="mb-0 text-white fs-5 text-opacity-70">A <span class="text-primary">showcase of
-                    creativity</span>, strategy, and results explore the projects that define us.</p>
+                <p class="mb-0 text-dark fs-5 text-opacity-70">Five builds across <span class="text-primary">healthcare,
+                    education, logistics, retail and real estate</span> — the thinking, the interface and the stack
+                  behind each one.</p>
               </div>
             </div>
           </div>
           <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <h1 class="mb-0 fs-16 text-white lh-1">Projects</h1>
-            <a href="javascript:void(0)" class="p-1 ps-7 bg-primary rounded-pill">
+            <h1 class="mb-0 fs-16 text-dark lh-1">Projects</h1>
+            <a href="#project-grid" aria-label="Jump to the project list" class="p-1 ps-7 bg-primary rounded-pill">
               <span class="bg-white round-52 rounded-circle d-flex align-items-center justify-content-center">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                <iconify-icon icon="lucide:arrow-down" class="fs-8 text-dark"></iconify-icon>
               </span>
             </a>
           </div>
@@ -119,321 +133,272 @@
     </section>
 
     <!--  Project Section -->
-    <section class="project py-5 py-lg-11 py-xl-12">
+    <section class="project py-5 py-lg-11 py-xl-12" id="project-grid">
       <div class="container">
         <div class="row">
-          <!-- Project 1 -->
+          <!-- PROJECT_GRID:START -->
           <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden rounded-4 shadow-sm border">
-                <img src="../assets/images/portfolio/biotrack.png" alt="BioTrack LIMS" class="img-fluid w-100 object-fit-cover">
+            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+              data-aos-duration="1000">
+              <div class="portfolio-img portfolio-img-top position-relative overflow-hidden rounded-4 shadow-sm border">
+                <img src="../assets/images/portfolio/bio_track.webp" alt="BioTrack LIMS interface" class="img-fluid w-100 object-fit-cover"
+                  loading="lazy">
                 <div class="portfolio-overlay">
-                  <a href="projects-detail.html" class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
+                  <a href="project-biotrack-lims.html" aria-label="View the BioTrack LIMS case study"
+                    class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
                     <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
                   </a>
                 </div>
               </div>
               <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">BioTrack LIMS</h3>
-                <div class="hstack gap-2">
+                <a href="project-biotrack-lims.html" class="text-dark text-decoration-none">
+                  <h3 class="mb-0">BioTrack LIMS</h3>
+                </a>
+                <p class="mb-0">A lab information management system that keeps sample tracking, testing and reporting in one real-time workspace.</p>
+                <div class="hstack gap-2 flex-wrap">
                   <span class="badge text-dark border">Healthcare</span>
+                  <span class="badge text-dark border">Web App</span>
+                  <span class="badge text-dark border">Dashboard UI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-7">
+            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="200"
+              data-aos-duration="1000">
+              <div class="portfolio-img portfolio-img-top position-relative overflow-hidden rounded-4 shadow-sm border">
+                <img src="../assets/images/portfolio/learnsphere.webp" alt="LearnSphere EdTech interface" class="img-fluid w-100 object-fit-cover"
+                  loading="lazy">
+                <div class="portfolio-overlay">
+                  <a href="project-learnsphere-edtech.html" aria-label="View the LearnSphere EdTech case study"
+                    class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                  </a>
+                </div>
+              </div>
+              <div class="portfolio-details d-flex flex-column gap-3">
+                <a href="project-learnsphere-edtech.html" class="text-dark text-decoration-none">
+                  <h3 class="mb-0">LearnSphere EdTech</h3>
+                </a>
+                <p class="mb-0">An online learning platform that pairs course discovery and live sessions with progress tracking and certificates.</p>
+                <div class="hstack gap-2 flex-wrap">
+                  <span class="badge text-dark border">Education</span>
+                  <span class="badge text-dark border">LMS Platform</span>
                   <span class="badge text-dark border">Web App</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden rounded-4 shadow-sm border">
-                <img src="../assets/images/portfolio/edtech.png" alt="LearnSphere EdTech" class="img-fluid w-100 object-fit-cover">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html" class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">LearnSphere EdTech</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">Education</span>
-                  <span class="badge text-dark border">Platform</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden rounded-4 shadow-sm border">
-                <img src="../assets/images/portfolio/realestate.png" alt="Prime Real Estate" class="img-fluid w-100 object-fit-cover">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html" class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Prime Real Estate</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">Real Estate</span>
-                  <span class="badge text-dark border">Web Design</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden rounded-4 shadow-sm border">
-                <img src="../assets/images/portfolio/portfolio-img-1.png" alt="Kavi Spices" class="img-fluid w-100 object-fit-cover">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html" class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Kavi Spices</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">FMCG</span>
-                  <span class="badge text-dark border">Web Design</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden rounded-4 shadow-sm border">
-                <img src="../assets/images/portfolio/portfolio-img-2.png" alt="Global Freight Logistics" class="img-fluid w-100 object-fit-cover">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html" class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Global Freight Logistics</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">Logistics</span>
-                  <span class="badge text-dark border">B2B</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden rounded-4 shadow-sm border">
-                <img src="../assets/images/portfolio/portfolio-img-3.png" alt="Urban Lifestyle" class="img-fluid w-100 object-fit-cover">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html" class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Urban Lifestyle</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">eCommerce</span>
-                  <span class="badge text-dark border">Shopify</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!--  Project Section -->
-    <section class="project py-5 py-lg-11 py-xl-12">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
-              data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden">
-                <img src="../assets/images/portfolio/portfolio-img-5.jpg" alt="" class="img-fluid w-100">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html"
-                    class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Amber Bottle</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">Photography</span>
-                  <span class="badge text-dark border">Studio</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="200"
-              data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden">
-                <img src="../assets/images/portfolio/portfolio-img-4.jpg" alt="" class="img-fluid w-100">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html"
-                    class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">BioTrack LIMS</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">Brand identity</span>
-                  <span class="badge text-dark border">Digital design</span>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-lg-6 mb-7">
             <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="300"
               data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden">
-                <img src="../assets/images/portfolio/portfolio-img-6.jpg" alt="" class="img-fluid w-100">
+              <div class="portfolio-img portfolio-img-top position-relative overflow-hidden rounded-4 shadow-sm border">
+                <img src="../assets/images/portfolio/logistic.webp" alt="Global Freight Logistics interface" class="img-fluid w-100 object-fit-cover"
+                  loading="lazy">
                 <div class="portfolio-overlay">
-                  <a href="projects-detail.html"
+                  <a href="project-global-freight-logistics.html" aria-label="View the Global Freight Logistics case study"
                     class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
                     <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
                   </a>
                 </div>
               </div>
               <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Digital Magazine</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">Digital design</span>
-                  <span class="badge text-dark border">Web development</span>
+                <a href="project-global-freight-logistics.html" class="text-dark text-decoration-none">
+                  <h3 class="mb-0">Global Freight Logistics</h3>
+                </a>
+                <p class="mb-0">A B2B logistics website that turns service enquiries into qualified quote requests.</p>
+                <div class="hstack gap-2 flex-wrap">
+                  <span class="badge text-dark border">Logistics</span>
+                  <span class="badge text-dark border">B2B Website</span>
+                  <span class="badge text-dark border">Lead Generation</span>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="col-lg-6 mb-7">
             <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="400"
               data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden">
-                <img src="../assets/images/portfolio/portfolio-img-3.jpg" alt="" class="img-fluid w-100">
+              <div class="portfolio-img portfolio-img-top position-relative overflow-hidden rounded-4 shadow-sm border">
+                <img src="../assets/images/portfolio/proct_urbanstyle.webp" alt="Urban Lifestyle interface" class="img-fluid w-100 object-fit-cover"
+                  loading="lazy">
                 <div class="portfolio-overlay">
-                  <a href="projects-detail.html"
+                  <a href="project-urban-lifestyle.html" aria-label="View the Urban Lifestyle case study"
                     class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
                     <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
                   </a>
                 </div>
               </div>
               <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Pixelforge</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">UI/UX design</span>
-                  <span class="badge text-dark border">Web development</span>
+                <a href="project-urban-lifestyle.html" class="text-dark text-decoration-none">
+                  <h3 class="mb-0">Urban Lifestyle</h3>
+                </a>
+                <p class="mb-0">A luxury fashion storefront and shopping app that holds one editorial look from lookbook to checkout.</p>
+                <div class="hstack gap-2 flex-wrap">
+                  <span class="badge text-dark border">eCommerce</span>
+                  <span class="badge text-dark border">Fashion</span>
+                  <span class="badge text-dark border">Mobile App</span>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="col-lg-6 mb-7">
             <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="500"
               data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden">
-                <img src="../assets/images/portfolio/portfolio-img-1.jpg" alt="" class="img-fluid w-100">
+              <div class="portfolio-img portfolio-img-top position-relative overflow-hidden rounded-4 shadow-sm border">
+                <img src="../assets/images/portfolio/real_estate.webp" alt="Prime Real Estate interface" class="img-fluid w-100 object-fit-cover"
+                  loading="lazy">
                 <div class="portfolio-overlay">
-                  <a href="projects-detail.html"
+                  <a href="project-prime-real-estate.html" aria-label="View the Prime Real Estate case study"
                     class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
                     <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
                   </a>
                 </div>
               </div>
               <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Snapclear</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">UX Strategy</span>
-                  <span class="badge text-dark border">UI Design</span>
+                <a href="project-prime-real-estate.html" class="text-dark text-decoration-none">
+                  <h3 class="mb-0">Prime Real Estate</h3>
+                </a>
+                <p class="mb-0">A property discovery site where listings are presented like an architecture portfolio.</p>
+                <div class="hstack gap-2 flex-wrap">
+                  <span class="badge text-dark border">Real Estate</span>
+                  <span class="badge text-dark border">Web Design</span>
+                  <span class="badge text-dark border">Property Search</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 mb-7">
-            <div class="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="600"
-              data-aos-duration="1000">
-              <div class="portfolio-img position-relative overflow-hidden">
-                <img src="../assets/images/portfolio/portfolio-img-2.jpg" alt="" class="img-fluid w-100">
-                <div class="portfolio-overlay">
-                  <a href="projects-detail.html"
-                    class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-              <div class="portfolio-details d-flex flex-column gap-3">
-                <h3 class="mb-0">Transfermax</h3>
-                <div class="hstack gap-2">
-                  <span class="badge text-dark border">Web development</span>
-                  <span class="badge text-dark border">Digital design</span>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- PROJECT_GRID:END -->
         </div>
       </div>
     </section>
 
   </div>
 
-  <footer class="footer bg-dark py-5 py-lg-11 py-xl-12">
+  <footer class="footer bg-dark pt-5 pt-lg-11 pt-xl-12">
     <div class="container">
-      <div class="row">
-        <div class="col-xl-5 mb-8 mb-xl-0">
-          <div class="d-flex flex-column gap-8 pe-xl-5">
-            <h6 class="mb-1 text-primary">YOUR VISION. OUR CODE. DIGITAL SUCCESS.</h6>
-            <h2 class="mb-0 text-white">Build Your Powerful Online Presence</h2>
-            <p class="text-white text-opacity-70">Premium Websites That Convert Visitors into Customers</p>
+      <div class="row gap-8 gap-xl-0">
+
+        <!-- Pitch + primary actions -->
+        <div class="col-xl-4 pe-xl-8">
+          <div class="d-flex flex-column gap-6">
+            <h2 class="mb-0 text-white">Build websites that turn visitors into customers</h2>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="contact.html" class="footer-btn footer-btn-outline">Contact sales</a>
+              <a href="projects.html" class="footer-btn footer-btn-solid">View our work</a>
+            </div>
             <div class="d-flex flex-column gap-2">
-              <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
-                fodavintechnologies@gmail.com
+              <a href="tel:+918438877646" class="footer-link hstack gap-3">
+                <iconify-icon icon="lucide:phone" class="fs-6 text-primary"></iconify-icon>+91 84388 77646
               </a>
-              <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank"
-                class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
-                fodavintechnologies@gmail.com
+              <a href="mailto:fodavintechnologies@gmail.com" class="footer-link hstack gap-3">
+                <iconify-icon icon="lucide:mail" class="fs-6 text-primary"></iconify-icon>fodavintechnologies@gmail.com
               </a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
+
+        <!-- Services -->
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-heading">Services</p>
           <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="index.html">Home</a></li>
-            <li><a class="link-hover fs-5 text-white" href="about-us.html">About</a></li>
-            <li><a class="link-hover fs-5 text-white" id="services" href="#services">Services</a></li>
-            <li><a class="link-hover fs-5 text-white" href="projects.html">Work</a></li>
-            <li><a class="link-hover fs-5 text-white" href="terms-and-conditions.html">Terms</a></li>
-            <li><a class="link-hover fs-5 text-white" href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a class="link-hover fs-5 text-white" href="404.html">Error 404</a></li>
+            <li><a class="footer-link" href="services.html">Web Design &amp; Development</a></li>
+            <li><a class="footer-link" href="services.html">Web Applications</a></li>
+            <li><a class="footer-link" href="services.html">UI/UX Design</a></li>
+            <li><a class="footer-link" href="services.html">SEO &amp; Performance</a></li>
+            <li><a class="footer-link" href="services.html">Maintenance &amp; Support</a></li>
+            <li><a class="footer-link" href="services.html">Security &amp; Compliance</a></li>
           </ul>
         </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
+
+        <!-- Projects -->
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-heading">Projects</p>
           <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="#!">Facebook</a></li>
-            <li><a class="link-hover fs-5 text-white" href="#!">Instagram</a></li>
-            <li><a class="link-hover fs-5 text-white" href="#!">Twitter</a></li>
+            <li><a class="footer-link" href="project-biotrack-lims.html">BioTrack LIMS</a></li>
+            <li><a class="footer-link" href="project-learnsphere-edtech.html">LearnSphere EdTech</a></li>
+            <li><a class="footer-link" href="project-global-freight-logistics.html">Global Freight Logistics</a></li>
+            <li><a class="footer-link" href="project-urban-lifestyle.html">Urban Lifestyle</a></li>
+            <li><a class="footer-link" href="project-prime-real-estate.html">Prime Real Estate</a></li>
+            <li><a class="footer-link" href="projects.html">All projects</a></li>
           </ul>
         </div>
-        <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
-          <p class="mb-0 text-white text-opacity-70 text-md-end">© Fodavin Technologies copyright 2026</p>
+
+        <!-- Company -->
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
+            <li><a class="footer-link" href="index.html">Home</a></li>
+            <li><a class="footer-link" href="about-us.html">About us</a></li>
+            <li><a class="footer-link" href="services.html">Services</a></li>
+            <li><a class="footer-link" href="projects.html">Projects</a></li>
+            <li><a class="footer-link" href="courses/index.html">Courses</a></li>
+            <li><a class="footer-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter + socials -->
+        <div class="col-md-6 col-xl-2">
+          <p class="footer-heading">Stay in touch</p>
+          <p class="footer-note mb-4">Occasional notes on what we are building, and what we have learned shipping it.</p>
+          <form class="footer-newsletter d-flex flex-column gap-3 mb-6" data-fodavin-form="newsletter">
+            <input type="email" name="email" class="form-control" placeholder="you@company.com"
+              aria-label="Email address" required>
+            <input type="text" name="company_website" class="fodavin-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="footer-btn footer-btn-solid w-100 justify-content-center">Subscribe</button>
+          </form>
+          <div class="hstack gap-2 flex-wrap">
+            <a href="https://wa.me/918438877646" class="footer-social" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <iconify-icon icon="mdi:whatsapp" class="fs-7"></iconify-icon>
+            </a>
+            <a href="mailto:fodavintechnologies@gmail.com" class="footer-social" aria-label="Email">
+              <iconify-icon icon="mdi:email" class="fs-7"></iconify-icon>
+            </a>
+            <a href="https://www.linkedin.com/company/fodavin-technologies/" class="footer-social" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <iconify-icon icon="mdi:linkedin" class="fs-7"></iconify-icon>
+            </a>
+            <a href="https://www.instagram.com/fodavin/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">
+              <iconify-icon icon="mdi:instagram" class="fs-7"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Wordmark -->
+      <div class="footer-wordmark" aria-hidden="true">
+        <svg viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Fodavin">
+          <defs>
+            <linearGradient id="fodavinWordmarkGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+              <stop offset="30%" stop-color="#fbb23f" stop-opacity="0.95" />
+              <stop offset="65%" stop-color="#ffd68a" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3" />
+            </linearGradient>
+          </defs>
+          <text x="600" y="158" text-anchor="middle" textLength="1150" lengthAdjust="spacingAndGlyphs"
+            font-family="Manrope, sans-serif" font-size="190" font-weight="800" fill="none"
+            stroke="url(#fodavinWordmarkGradient)" stroke-width="2">FODAVIN</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Legal bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <p class="mb-0 footer-note">&copy; 2026 Fodavin Technologies</p>
+          <div class="hstack gap-3 flex-wrap footer-legal">
+            <a class="footer-link" href="privacy-policy.html">Privacy Notice</a>
+            <span class="footer-sep"></span>
+            <a class="footer-link" href="terms-and-conditions.html">Terms of Service</a>
+          </div>
         </div>
       </div>
     </div>
-    <p class="mb-0 text-white text-opacity-70 text-md-center mt-10">Distributed by <a class="text-white"
-        href="index.html">Fodavin Technologies</a></p>
   </footer>
 
   <div class="get-template hstack gap-2">
@@ -450,6 +415,8 @@
   <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
   <script src="../assets/libs/aos-master/dist/aos.js"></script>
   <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/fodavin-config.js"></script>
+  <script src="../assets/js/fodavin-forms.js"></script>
   <!-- solar icons -->
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>

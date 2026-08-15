@@ -77,5 +77,25 @@ $(function () {
 		once: true,
 	});
 
-});
+    // Nav active state - derived from the current filename so the same
+    // header markup can be synced across every page.
+    var page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    var navKey = null;
+    if (page === '' || page.indexOf('index') === 0) {
+        navKey = 'home';
+    } else if (page.indexOf('about') === 0) {
+        navKey = 'about';
+    } else if (page.indexOf('project') === 0) {
+        navKey = 'projects';
+    } else if (page.indexOf('contact') === 0) {
+        navKey = 'contact';
+    } else if (page.indexOf('services') === 0) {
+        navKey = 'services';
+    }
+    // Pages that are not nav destinations (legal, 404) leave every item inactive.
+    $('[data-nav]').removeClass('active').removeAttr('aria-current');
+    if (navKey) {
+        $('[data-nav="' + navKey + '"]').addClass('active').attr('aria-current', 'page');
+    }
 
+});

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submissions | Fodavin Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body class="admin-body">
+
+  <!-- Admin bar: deliberately not the public site header -->
+  <header class="admin-header">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <div class="hstack gap-3">
+        <a href="index.html" class="d-inline-flex">
+          <img src="../assets/images/logos/logo-dark.svg" alt="Fodavin Technologies" width="132">
+        </a>
+        <span class="admin-tag">Admin</span>
+      </div>
+      <div class="hstack gap-3">
+        <a href="index.html" class="admin-link d-none d-sm-inline">View site</a>
+        <button id="logout" class="admin-act" type="button" hidden>Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-6 py-lg-8">
+
+    <!-- ---------------------------------------------------------- setup -->
+    <section id="view-setup" hidden>
+      <div class="admin-card p-5 p-lg-7" style="max-width: 720px; margin-inline: auto;">
+        <h1 class="fs-11 mb-4">Finish the setup</h1>
+        <p class="fs-5">The dashboard has no backend to talk to yet. Deploy the Apps Script and paste its
+          URL into <code>assets/js/fodavin-config.js</code>.</p>
+        <ol class="fs-5 d-flex flex-column gap-2 ps-4 mb-6">
+          <li>Create a Google Sheet, then <strong>Extensions &rarr; Apps Script</strong>.</li>
+          <li>Paste the contents of <code>backend/Code.gs</code> and set <code>ADMIN_PASSWORD</code>.</li>
+          <li><strong>Deploy &rarr; New deployment &rarr; Web app</strong>; run as <em>Me</em>, access
+            <em>Anyone</em>.</li>
+          <li>Copy the <code>/exec</code> URL into <code>formsEndpoint</code>.</li>
+        </ol>
+        <p class="fs-5 mb-0">Full walkthrough in <code>backend/README.md</code>.</p>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------- login -->
+    <section id="view-login" class="admin-auth" hidden>
+      <div class="admin-auth-card">
+        <span class="admin-auth-icon">
+          <iconify-icon icon="lucide:lock" class="fs-7"></iconify-icon>
+        </span>
+        <h1 class="fs-11 mb-2">Submissions</h1>
+        <p class="mb-6 text-muted">Sign in to view enquiries and newsletter signups.</p>
+
+        <form id="login-form" class="d-flex flex-column gap-4">
+          <div>
+            <label for="password" class="form-label fw-bold">Password</label>
+            <div class="admin-password-wrap">
+              <input type="password" id="password" class="form-control" autocomplete="current-password"
+                autofocus required>
+              <button type="button" id="toggle-pw" class="admin-password-toggle" aria-label="Show password">
+                <iconify-icon icon="lucide:eye" class="fs-5"></iconify-icon>
+              </button>
+            </div>
+          </div>
+
+          <p id="login-error" class="form-status form-status-error mb-0" role="alert" hidden></p>
+
+          <button type="submit" id="login-submit" class="btn justify-content-center">
+            <span class="btn-text">Unlock</span>
+          </button>
+        </form>
+
+        <p class="admin-auth-note">Checked against the password set in your Apps Script. Nothing is
+          stored in this page beyond the current browser tab.</p>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------ app -->
+    <section id="view-app" hidden>
+
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-6">
+        <div>
+          <h1 class="fs-12 mb-1">Submissions</h1>
+          <p class="mb-0 admin-meta" id="result-count">&mdash;</p>
+        </div>
+        <div class="hstack gap-2">
+          <button id="refresh" class="admin-act" type="button">
+            <span class="btn-text">Refresh</span>
+          </button>
+          <button id="export" class="admin-act" type="button">Export CSV</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="row g-3 g-lg-4 mb-6">
+        <div class="col-6 col-xl-3">
+          <div class="admin-stat">
+            <span class="admin-stat-icon"><iconify-icon icon="lucide:inbox" class="fs-6"></iconify-icon></span>
+            <div>
+              <p class="admin-stat-label">Total</p>
+              <p class="admin-stat-value" id="stat-total">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div class="admin-stat admin-stat-accent">
+            <span class="admin-stat-icon"><iconify-icon icon="lucide:mail-open" class="fs-6"></iconify-icon></span>
+            <div>
+              <p class="admin-stat-label">Unread</p>
+              <p class="admin-stat-value" id="stat-new">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div class="admin-stat">
+            <span class="admin-stat-icon"><iconify-icon icon="lucide:calendar-days" class="fs-6"></iconify-icon></span>
+            <div>
+              <p class="admin-stat-label">Last 7 days</p>
+              <p class="admin-stat-value" id="stat-week">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div class="admin-stat">
+            <span class="admin-stat-icon"><iconify-icon icon="lucide:users" class="fs-6"></iconify-icon></span>
+            <div>
+              <p class="admin-stat-label">Subscribers</p>
+              <p class="admin-stat-value" id="stat-subs">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="admin-card admin-filters p-4 mb-5">
+        <div class="row g-3 align-items-end">
+          <div class="col-12 col-lg-6">
+            <label for="search" class="form-label fw-bold">Search</label>
+            <input type="search" id="search" class="form-control" placeholder="Name, email, phone or message">
+          </div>
+          <div class="col-6 col-lg-3">
+            <label for="filter-type" class="form-label fw-bold">Type</label>
+            <select id="filter-type" class="form-select">
+              <option value="all">All types</option>
+              <option value="contact">Enquiries</option>
+              <option value="newsletter">Newsletter</option>
+            </select>
+          </div>
+          <div class="col-6 col-lg-3">
+            <label for="filter-status" class="form-label fw-bold">Status</label>
+            <select id="filter-status" class="form-select">
+              <option value="all">All statuses</option>
+              <option value="new">New</option>
+              <option value="read">Read</option>
+              <option value="replied">Replied</option>
+              <option value="archived">Archived</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <p id="load-error" class="form-status form-status-error mb-4" role="alert" hidden></p>
+
+      <div class="admin-card admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th scope="col">Received</th>
+              <th scope="col">Type</th>
+              <th scope="col">From</th>
+              <th scope="col">Message</th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p id="empty-state" class="p-7 mb-0 text-center admin-meta" hidden></p>
+      </div>
+
+    </section>
+  </main>
+
+  <div id="toast" class="admin-toast" role="status" aria-live="polite"></div>
+
+  <script src="../assets/js/fodavin-config.js"></script>
+  <script src="../assets/js/fodavin-admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
