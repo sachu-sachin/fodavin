@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# The admin dashboard carries a noindex tag, so crawlers must be able to
+# fetch it in order to see that tag. Disallowing it here would both hide
+# the noindex and advertise the path.
+
+Sitemap: https://fodavin.in/sitemap.xml
