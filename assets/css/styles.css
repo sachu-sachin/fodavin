@@ -19983,6 +19983,259 @@ ul {
   opacity: 1;
 }
 
+/* Links inside running text (paragraphs, FAQ answers, captions).
+   Only class-less anchors are matched, so buttons, cards and breadcrumbs
+   keep their own look. Text stays dark for contrast; the amber underline
+   marks it as a link and fills in on hover. */
+.page-wrapper a:not([class]),
+.page-wrapper a.text-decoration-underline,
+.page-wrapper a.text-link {
+  color: var(--bs-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--bs-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.page-wrapper a:not([class]):hover,
+.page-wrapper a.text-decoration-underline:hover,
+.page-wrapper a.text-link:hover {
+  color: var(--bs-dark);
+  background-color: rgba(var(--bs-primary-rgb), 0.25);
+  text-decoration-color: var(--bs-dark);
+}
+
+.page-wrapper a:not([class]):focus-visible,
+.page-wrapper a.text-link:focus-visible {
+  outline: 2px solid var(--bs-dark);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------
+   Contact page
+------------------------------------------------------------------ */
+
+.contact-channel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 28px;
+  border-radius: 20px;
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.1);
+  box-shadow: 0 10px 30px rgba(31, 42, 46, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-channel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--bs-primary-rgb), 0.6);
+  box-shadow: 0 18px 40px rgba(31, 42, 46, 0.1);
+}
+
+.contact-channel-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background-color: rgba(var(--bs-primary-rgb), 0.2);
+  color: var(--bs-dark);
+  font-size: 24px;
+}
+
+.contact-channel-title {
+  margin-bottom: 4px;
+  font-size: 1.25rem;
+}
+
+.contact-channel .text-link {
+  font-size: 1.0625rem;
+}
+
+.contact-channel-note {
+  margin: 6px 0 0;
+  font-size: 0.9375rem;
+  color: #5c6669;
+}
+
+.contact-subhead {
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5c6669;
+}
+
+.contact-teams > div,
+.contact-hours > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(31, 42, 46, 0.1);
+}
+
+.contact-teams > div:first-child {
+  border-top: 1px solid rgba(31, 42, 46, 0.1);
+}
+
+.contact-hours > div {
+  padding: 6px 0;
+}
+
+.contact-hours > div:last-child {
+  border-bottom: 0;
+}
+
+.contact-teams dt,
+.contact-hours dt {
+  font-weight: 500;
+  color: var(--bs-dark);
+}
+
+.contact-teams dd,
+.contact-hours dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--bs-dark);
+}
+
+.contact-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--bs-dark);
+  font-size: 1.0625rem;
+}
+
+.contact-steps li > span {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-steps li p {
+  padding-top: 3px;
+}
+
+.contact-form-card {
+  padding: 28px;
+  border-radius: 24px;
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.1);
+  box-shadow: 0 24px 60px rgba(31, 42, 46, 0.1);
+}
+
+@media (min-width: 992px) {
+  .contact-form-card {
+    padding: 44px;
+  }
+}
+
+.contact-form-card .form-label {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--bs-dark);
+}
+
+.contact-form-card .form-control,
+.contact-form-card .form-select {
+  padding: 13px 16px;
+  font-size: 1rem;
+  color: var(--bs-dark);
+  background-color: var(--bs-light-gray);
+  border: 1px solid rgba(31, 42, 46, 0.14);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.contact-form-card .form-control:focus,
+.contact-form-card .form-select:focus {
+  color: var(--bs-dark);
+  background-color: var(--bs-white);
+  border-color: var(--bs-dark);
+  box-shadow: 0 0 0 4px rgba(var(--bs-primary-rgb), 0.35);
+}
+
+.contact-form-card textarea.form-control {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-office-card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px;
+  border-radius: 20px;
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.08);
+}
+
+.contact-office-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-office-row > .iconify {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgba(var(--bs-primary-rgb), 0.2);
+  color: var(--bs-dark);
+  font-size: 20px;
+}
+
+.contact-map {
+  min-height: 420px;
+  border: 1px solid rgba(31, 42, 46, 0.08);
+}
+
+.contact-map iframe {
+  display: block;
+  min-height: 420px;
+}
+
+/* External links open in a new tab; the arrow says so */
+.page-wrapper a:not([class])[target="_blank"]::after,
+.page-wrapper a.text-link[target="_blank"]::after {
+  content: "\2197";
+  content: "\2197" / "";
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
 /* Desktop sub-menus.
    A parent keeps its own link (Services -> /services/) and gets a chevron
    button laid over the right end of its pill. The panel opens on hover, on

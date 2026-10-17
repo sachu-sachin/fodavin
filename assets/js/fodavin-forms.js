@@ -71,6 +71,13 @@
     }
   }
 
+  /** The optional topic picker travels inside the message, so the backend needs no new column. */
+  function withTopic(form) {
+    var topic = value(form, 'topic');
+    var message = value(form, 'message');
+    return topic ? 'Topic: ' + topic + '\n\n' + message : message;
+  }
+
   function looksLikeEmail(v) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
   }
@@ -95,7 +102,7 @@
       : 'Newsletter signup';
     var body = type === 'contact'
       ? 'Name: ' + value(form, 'name') + '\nEmail: ' + value(form, 'email') +
-        '\n\n' + value(form, 'message')
+        '\n\n' + withTopic(form)
       : 'Please add ' + value(form, 'email') + ' to the mailing list.';
 
     window.location.href = 'mailto:' + to +
@@ -128,7 +135,7 @@
       name: value(form, 'name'),
       email: value(form, 'email'),
       phone: value(form, 'phone'),
-      message: value(form, 'message'),
+      message: withTopic(form),
       page: window.location.pathname || '/',
       company_website: value(form, 'company_website') // honeypot
     };
