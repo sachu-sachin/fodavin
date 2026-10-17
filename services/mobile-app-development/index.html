@@ -138,6 +138,9 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/logos/favicon-192.png" />
   <link rel="apple-touch-icon" href="/assets/images/logos/apple-touch-icon.png" />
   <link rel="stylesheet" href="/assets/libs/aos-master/dist/aos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap">
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 
@@ -149,10 +152,10 @@
       <div class="header-wrapper d-flex align-items-center justify-content-between gap-4">
         <div class="logo">
           <a href="/" class="logo-white" style="display: none;">
-            <img src="/assets/images/logos/logo-white.svg" alt="Fodavin Technologies" class="img-fluid" width="160">
+            <img src="/assets/images/logos/logo-white.svg" alt="Fodavin Technologies" class="img-fluid" width="160" height="24">
           </a>
           <a href="/" class="logo-dark" style="display: block;">
-            <img src="/assets/images/logos/logo-dark.svg" alt="Fodavin Technologies" class="img-fluid" width="160">
+            <img src="/assets/images/logos/logo-dark.svg" alt="Fodavin Technologies" class="img-fluid" width="160" height="24">
           </a>
         </div>
 
@@ -232,13 +235,13 @@
   </header>
 
   <!--  Page Wrapper -->
-  <div class="page-wrapper overflow-hidden">
+  <main class="page-wrapper overflow-hidden" id="main">
 
     <!--  Banner Section -->
     <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end bg-white bg-grid">
       <div class="container">
         <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
-          <nav aria-label="Breadcrumb" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <nav aria-label="Breadcrumb">
             <ol class="breadcrumb mb-0">
               <li class="breadcrumb-item"><a href="/" class="text-dark">Home</a></li>
               <li class="breadcrumb-item"><a href="/services/" class="text-dark">Services</a></li>
@@ -247,14 +250,13 @@
           </nav>
           <div class="row align-items-center">
             <div class="col-xl-5">
-              <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
-                data-aos-duration="1000">
+              <div class="d-flex align-items-center gap-4">
                 <img src="/assets/images/svgs/primary-leaf.svg" alt="" class="img-fluid animate-spin">
                 <p class="mb-0 text-dark fs-5 text-opacity-70">Android, iOS and cross-platform apps <span class="text-primary">people keep on their home screen</span>, built in Pollachi for businesses across Tamil Nadu.</p>
               </div>
             </div>
           </div>
-          <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <div class="d-flex align-items-end gap-3">
             <h1 class="mb-0 fs-15 text-dark lh-1">Mobile app development</h1>
             <a href="#service-overview" aria-label="Jump to the service details" class="p-1 ps-7 bg-primary rounded-pill flex-shrink-0">
               <span class="bg-white round-52 rounded-circle d-flex align-items-center justify-content-center">
@@ -617,7 +619,7 @@
       </div>
     </section>
 
-  </div>
+  </main>
 
   <footer class="footer bg-dark pt-5 pt-lg-11 pt-xl-12">
     <div class="container">

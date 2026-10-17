@@ -17,6 +17,7 @@ $(function () {
         margin: 30,
         nav: false,
         dots: false,
+        navElement: 'button type="button"',
         autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: false,
