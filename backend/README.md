@@ -17,7 +17,7 @@ about ten minutes.
 
    ```js
    var ADMIN_PASSWORD = 'CHANGE-ME-to-a-long-random-password';
-   var NOTIFY_EMAIL   = 'fodavintechnologies@gmail.com';
+   var NOTIFY_EMAIL   = 'enquiry@fodavin.in';
    ```
 
    Use a long random password — it is the only thing protecting the dashboard.
@@ -48,7 +48,7 @@ the URL:
 ```js
 window.FODAVIN_CONFIG = {
   formsEndpoint: 'https://script.google.com/macros/s/AKfycb.../exec',
-  fallbackEmail: 'fodavintechnologies@gmail.com'
+  fallbackEmail: 'enquiry@fodavin.in'
 };
 ```
 
@@ -58,7 +58,7 @@ Commit and push. Done.
 
 1. Open the live contact page and send yourself a test message.
 2. A row should appear in the Sheet and an email should arrive.
-3. Open `/html/admin_dashboard.html`, enter the password, and the submission
+3. Open `/admin/`, enter the password, and the submission
    should be listed.
 
 ## What you get

@@ -14,7 +14,7 @@
 var ADMIN_PASSWORD = 'CHANGE-ME-to-a-long-random-password';
 
 /** Where new-submission notifications are sent. */
-var NOTIFY_EMAIL = 'fodavintechnologies@gmail.com';
+var NOTIFY_EMAIL = 'enquiry@fodavin.in';
 
 /** Sheet tab name. Created automatically on first submission. */
 var SHEET_NAME = 'Submissions';

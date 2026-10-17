@@ -89,7 +89,7 @@
 
   /** No endpoint configured yet - hand off to email rather than lose the message. */
   function mailtoFallback(form, type) {
-    var to = cfg.fallbackEmail || 'fodavintechnologies@gmail.com';
+    var to = cfg.fallbackEmail || 'enquiry@fodavin.in';
     var subject = type === 'contact'
       ? 'Website enquiry from ' + (value(form, 'name') || value(form, 'email'))
       : 'Newsletter signup';
@@ -129,7 +129,7 @@
       email: value(form, 'email'),
       phone: value(form, 'phone'),
       message: value(form, 'message'),
-      page: window.location.pathname.split('/').pop() || 'index.html',
+      page: window.location.pathname || '/',
       company_website: value(form, 'company_website') // honeypot
     };
 

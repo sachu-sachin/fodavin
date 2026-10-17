@@ -12,5 +12,5 @@ window.FODAVIN_CONFIG = {
   formsEndpoint: 'https://script.google.com/macros/s/AKfycbzOghNzGvB74A5zqOoKYGTEW83CEKocnc4ZAxu9IAVCqDOnvgfaEZE1MH9xTw6jzJuE/exec',
 
   // Used as the fallback when formsEndpoint is empty.
-  fallbackEmail: 'fodavintechnologies@gmail.com'
+  fallbackEmail: 'enquiry@fodavin.in'
 };
