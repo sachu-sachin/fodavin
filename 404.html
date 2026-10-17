@@ -17,6 +17,11 @@
 
 <body>
 
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-lucide-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></symbol>
+    <symbol id="i-lucide-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12l7-7l7 7m-7 7V5"/></symbol>
+  </svg>
+
   <!--  Page Wrapper -->
   <main class="page-wrapper overflow-hidden" id="main">
 
@@ -31,8 +36,7 @@
             Found</h2>
           <a href="/" class="btn mx-auto" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <span class="btn-text">Back to Home</span>
-            <iconify-icon icon="lucide:arrow-up-right"
-              class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+            <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
           </a>
         </div>
       </div>
@@ -44,7 +48,7 @@
     
     <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
       id="scrollToTopBtn">
-      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
+      <span class="iconify fs-7 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up"></use></svg></span>
     </button>
   </div>
 
@@ -56,8 +60,6 @@
   <script src="/assets/js/custom.js" defer></script>
   <script src="/assets/js/fodavin-config.js" defer></script>
   <script src="/assets/js/fodavin-forms.js" defer></script>
-  <!-- solar icons -->
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js" defer></script>
 </body>
 
 </html>

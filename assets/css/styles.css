@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/* Inline SVG icons (replaces the iconify-icon web component) */
+.iconify {
+  display: inline-block;
+  vertical-align: -0.125em;
+  line-height: 1;
+}
+.iconify > svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
 /* Manrope (variable, 200-800), self-hosted from Google Fonts, SIL Open Font License */
 @font-face {
   font-family: "Manrope";

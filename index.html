@@ -93,6 +93,45 @@
 
 <body>
 
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-solar-hamburger-menu-line-duotone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M20 7L4 7"/><path d="M20 12L4 12" opacity=".5"/><path d="M20 17L4 17"/></g></symbol>
+    <symbol id="i-lucide-map-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-lucide-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol>
+    <symbol id="i-lucide-megaphone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2a2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14M8 6v8"/></g></symbol>
+    <symbol id="i-lucide-smartphone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></g></symbol>
+    <symbol id="i-lucide-sheet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M3 9h18M3 15h18M9 9v12m6-12v12"/></g></symbol>
+    <symbol id="i-lucide-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></symbol>
+    <symbol id="i-solar-play-outline" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M7.23832 3.04445C5.65196 2.1818 3.75 3.31957 3.75 5.03299L3.75 18.9672C3.75 20.6806 5.65196 21.8184 7.23832 20.9557L20.0503 13.9886C21.6499 13.1188 21.6499 10.8814 20.0503 10.0116L7.23832 3.04445ZM2.25 5.03299C2.25 2.12798 5.41674 0.346438 7.95491 1.72669L20.7669 8.6938C23.411 10.1317 23.411 13.8685 20.7669 15.3064L7.95491 22.2735C5.41674 23.6537 2.25 21.8722 2.25 18.9672L2.25 5.03299Z" clip-rule="evenodd"/></symbol>
+    <symbol id="i-logos-google-icon" viewBox="0 0 256 262"><path fill="#4285f4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"/><path fill="#34a853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"/><path fill="#fbbc05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z"/><path fill="#eb4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"/></symbol>
+    <symbol id="i-solar-star-bold" viewBox="0 0 24 24"><path fill="currentColor" d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z"/></symbol>
+    <symbol id="i-lucide-maximize" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-lucide-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"/></symbol>
+    <symbol id="i-lucide-layout-grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></g></symbol>
+    <symbol id="i-lucide-layout-template" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></g></symbol>
+    <symbol id="i-lucide-blocks" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"/><rect width="8" height="8" x="14" y="2" rx="1"/></g></symbol>
+    <symbol id="i-lucide-pen-tool" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 13l-.654-4.736a4 4 0 0 0-2.756-3.266l-9.163-2.9a2 2 0 0 0-2.017.493l-.82.819a2 2 0 0 0-.492 2.017l2.9 9.163a4 4 0 0 0 3.266 2.756L13 18"/><path d="M18.648 12.352a1.205 1.205 0 0 1 1.704 0l1.296 1.296a1.205 1.205 0 0 1 0 1.704l-6.296 6.296a1.205 1.205 0 0 1-1.704 0l-1.296-1.296a1.205 1.205 0 0 1 0-1.704zM3 3l6.586 6.586"/><circle cx="11" cy="11" r="2"/></g></symbol>
+    <symbol id="i-lucide-wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></symbol>
+    <symbol id="i-lucide-clapperboard" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12.296 3.464l3.02 3.956M20.2 6L3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3zM3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm3.18-5.724l3.1 3.899"/></symbol>
+    <symbol id="i-solar-star-line-duotone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" opacity=".5"/><path d="M18.4834 16.7674L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8116 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0249 12 20.0249C11.6531 20.0249 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77267 21.8116 6.62117 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19042 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4887 2.05742 9.54774C2.35002 8.60682 3.57986 8.32856 6.03954 7.77204L6.67589 7.62806C7.37485 7.46991 7.72433 7.39083 8.00494 7.17781C8.04432 7.14792 8.08172 7.11586 8.11791 7.08105"/></g></symbol>
+    <symbol id="i-lucide-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></symbol>
+    <symbol id="i-lucide-flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0a5 5 0 0 1 1-3a1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></symbol>
+    <symbol id="i-mdi-react" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10.11c1.03 0 1.87.84 1.87 1.89c0 1-.84 1.85-1.87 1.85S10.13 13 10.13 12c0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7c-.52-.59-1.03-1.23-1.51-1.9a23 23 0 0 1-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86c.27.06.57.11.88.16zm6.54-.76l.81-1.5l-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9s-1.17 0-1.71.03c-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47c.54.03 1.11.03 1.71.03s1.17 0 1.71-.03c.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7c.52.59 1.03 1.23 1.51 1.9c.82.08 1.63.2 2.4.36c.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86c-.27-.06-.57-.11-.88-.16zm1.45-7.05c1.47.84 1.63 3.05 1.01 5.63c2.54.75 4.37 1.99 4.37 3.68s-1.83 2.93-4.37 3.68c.62 2.58.46 4.79-1.01 5.63c-1.46.84-3.45-.12-5.37-1.95c-1.92 1.83-3.91 2.79-5.38 1.95c-1.46-.84-1.62-3.05-1-5.63c-2.54-.75-4.37-1.99-4.37-3.68s1.83-2.93 4.37-3.68c-.62-2.58-.46-4.79 1-5.63c1.47-.84 3.46.12 5.38 1.95c1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26c2.1-.63 3.28-1.53 3.28-2.26s-1.18-1.63-3.28-2.26c-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26c-2.1.63-3.28 1.53-3.28 2.26s1.18 1.63 3.28 2.26c.25-.76.55-1.51.89-2.26m9 2.26l-.3.51c.31-.05.61-.1.88-.16c-.07-.28-.18-.57-.29-.86zm-2.89 4.04c1.59 1.5 2.97 2.08 3.59 1.7c.64-.35.83-1.82.32-3.96c-.77.16-1.58.28-2.4.36c-.48.67-.99 1.31-1.51 1.9M8.08 9.74l.3-.51c-.31.05-.61.1-.88.16c.07.28.18.57.29.86zm2.89-4.04C9.38 4.2 8 3.62 7.37 4c-.63.35-.82 1.82-.31 3.96a23 23 0 0 1 2.4-.36c.48-.67.99-1.31 1.51-1.9"/></symbol>
+    <symbol id="i-mdi-nodejs" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.85c-.27 0-.55.07-.78.2l-7.44 4.3c-.48.28-.78.8-.78 1.36v8.58c0 .56.3 1.08.78 1.36l1.95 1.12c.95.46 1.27.47 1.71.47c1.4 0 2.21-.85 2.21-2.33V8.44c0-.12-.1-.22-.22-.22H8.5c-.13 0-.23.1-.23.22v8.47c0 .66-.68 1.31-1.77.76L4.45 16.5a.26.26 0 0 1-.11-.21V7.71c0-.09.04-.17.11-.21l7.44-4.29c.06-.04.16-.04.22 0l7.44 4.29c.07.04.11.12.11.21v8.58c0 .08-.04.16-.11.21l-7.44 4.29c-.06.04-.16.04-.23 0L10 19.65c-.08-.03-.16-.04-.21-.01c-.53.3-.63.36-1.12.51c-.12.04-.31.11.07.32l2.48 1.47q.36.21.78.21t.78-.21l7.44-4.29c.48-.28.78-.8.78-1.36V7.71c0-.56-.3-1.08-.78-1.36l-7.44-4.3c-.23-.13-.5-.2-.78-.2M14 8c-2.12 0-3.39.89-3.39 2.39c0 1.61 1.26 2.08 3.3 2.28c2.43.24 2.62.6 2.62 1.08c0 .83-.67 1.18-2.23 1.18c-1.98 0-2.4-.49-2.55-1.47a.226.226 0 0 0-.22-.18h-.96c-.12 0-.21.09-.21.22c0 1.24.68 2.74 3.94 2.74c2.35 0 3.7-.93 3.7-2.55c0-1.61-1.08-2.03-3.37-2.34c-2.31-.3-2.54-.46-2.54-1c0-.45.2-1.05 1.91-1.05c1.5 0 2.09.33 2.32 1.36c.02.1.11.17.21.17h.97c.05 0 .11-.02.15-.07c.04-.04.07-.1.05-.16C17.56 8.82 16.38 8 14 8"/></symbol>
+    <symbol id="i-mdi-language-python" viewBox="0 0 24 24"><path fill="currentColor" d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></symbol>
+    <symbol id="i-mdi-aws" viewBox="0 0 24 24"><path fill="currentColor" d="M7.64 10.38c0 .25.02.45.07.62c.05.12.12.28.21.46c.04.04.05.1.05.15c0 .07-.04.13-.13.2l-.42.28c-.06.04-.12.06-.17.06c-.07 0-.13-.04-.2-.1c-.09-.1-.17-.2-.24-.31c-.06-.11-.13-.24-.2-.39c-.52.61-1.17.92-1.96.92c-.56 0-1-.16-1.33-.48c-.32-.32-.49-.75-.49-1.29c0-.55.2-1 .6-1.36c.41-.34.95-.52 1.63-.52c.23 0 .44.02.71.06c.23.03.5.08.76.14v-.48c0-.51-.1-.84-.31-1.07c-.22-.21-.57-.3-1.08-.3c-.24 0-.48.03-.72.08c-.25.06-.49.13-.72.23c-.11.04-.2.07-.23.08c-.05.02-.08.02-.11.02c-.09 0-.14-.06-.14-.2v-.33c0-.1.01-.18.05-.23q.045-.075.18-.12c.24-.14.51-.24.84-.32a4 4 0 0 1 1.04-.13q1.185 0 1.74.54c.37.36.55.91.55 1.64v2.15zm-2.7 1.02c.22 0 .44-.04.68-.12s.45-.23.63-.43c.11-.13.19-.27.25-.43c0-.16.05-.35.05-.58v-.27c-.2-.07-.4-.07-.62-.12a7 7 0 0 0-.62-.04c-.45 0-.77.09-.99.27s-.32.43-.32.76c0 .32.07.56.24.71c.16.17.39.25.7.25m5.34.71a.6.6 0 0 1-.28-.06c-.03-.05-.08-.14-.12-.26L8.32 6.65c-.04-.15-.06-.22-.06-.27c0-.11.05-.17.16-.17h.65c.13 0 .22.02.26.07c.06.04.1.13.14.26l1.11 4.4l1.04-4.4c.03-.13.07-.22.13-.26c.05-.04.14-.07.25-.07h.55c.12 0 .21.02.26.07c.05.04.1.13.13.26L14 11l1.14-4.46c.04-.13.09-.22.13-.26c.06-.04.14-.07.26-.07h.62c.11 0 .17.06.17.17c0 .03-.01.07-.02.12c0 0-.02.08-.04.15l-1.61 5.14c-.04.14-.08.21-.15.26c-.04.04-.13.07-.24.07h-.57c-.13 0-.19-.02-.27-.07a.45.45 0 0 1-.12-.26L12.27 7.5l-1.03 4.28q-.045.195-.12.27a.5.5 0 0 1-.27.06zm8.55.18c-.33 0-.7-.04-1.03-.12s-.59-.17-.76-.26a.5.5 0 0 1-.21-.19a.4.4 0 0 1-.04-.18v-.34c0-.14.05-.2.15-.2h.12c.04 0 .1.05.17.08c.22.1.47.18.73.23c.27.05.54.08.79.08c.42 0 .75-.07.97-.22c.23-.17.35-.36.35-.63c0-.19-.07-.34-.18-.47c-.12-.12-.35-.24-.67-.34l-.97-.3c-.48-.16-.84-.38-1.06-.68a1.58 1.58 0 0 1-.33-.97c0-.28.06-.52.18-.73c.12-.22.28-.4.46-.55c.22-.15.44-.26.71-.34q.39-.12.84-.12q.21 0 .45.03c.14.02.28.05.42.07c.14.04.26.07.38.11s.2.08.28.12c.09.05.16.1.2.16s.06.13.06.22v.32q0 .21-.15.21c-.05 0-.14-.03-.26-.08c-.37-.17-.8-.26-1.27-.26c-.38 0-.66.06-.89.19c-.2.12-.31.32-.31.59c0 .19.07.35.2.47c.13.13.38.25.73.37l.95.3c.48.14.82.36 1.03.64q.3.405.3.93c0 .28-.06.54-.17.77c-.12.22-.28.42-.5.58c-.19.17-.44.29-.72.38s-.62.13-.95.13m1.25 3.24C17.89 17.14 14.71 18 12 18c-3.85 0-7.3-1.42-9.91-3.77c-.21-.19-.02-.44.23-.29c2.82 1.63 6.29 2.62 9.89 2.62c2.43 0 5.1-.5 7.55-1.56c.37-.15.68.26.32.53M21 14.5c-.29-.37-1.86-.18-2.57-.1c-.21.03-.24-.16-.05-.3c1.25-.87 3.31-.6 3.54-.33c.24.3-.06 2.36-1.23 3.34c-.19.15-.36.07-.28-.11c.27-.68.86-2.16.59-2.5"/></symbol>
+    <symbol id="i-cib-mongodb" viewBox="0 0 32 32"><path fill="currentColor" d="M22.906 12.693c-1.682-7.417-5.656-9.849-6.083-10.781c-.469-.661-.974-1.911-.974-1.911c-.005.026-.005.042-.01.068v.016c0 .021-.005.031-.005.052v.021h-.005v.067h-.005c0 .01 0 .026-.005.031v.031q.001.017-.005.026v.026q.001.025-.005.042v.005a.3.3 0 0 1-.01.068v.01q-.006.007-.005.016v.021h-.005v.031h-.005v.021h-.01v.031h-.005V.61h-.005v.021h-.005v.021h-.005v.021h-.005v.021h-.005V.71h-.005v.021h-.005v.021h-.005c-.005 0-.005.005-.005.005v.01l-.005.01q-.001.016-.01.031c-.005.005-.005.005-.005.01v.01h-.005v.01h-.01v.026h-.01V.88h-.005v.005h-.005v.01h-.005v.016h-.005v.01h-.01v.016h-.005v.01h-.005v.01h-.005v.016h-.005v.01h-.005v.005h-.005v.01h-.01v.016h-.005v.005h-.005v.01h-.005v.016h-.005v.005h-.005v.01h-.005v.005h-.005v.016h-.01v.005h-.005v.01h-.005v.005h-.005v.01h-.005v.01c-.005 0-.005.005-.005.005v.005h-.005l-.016.026s-.01.01-.01.016c-.005 0-.005.005-.005.005v.005h-.005v.005h-.005v.01h-.01v.005h-.005v.005h-.005v.015h-.005v.005h-.005v.005h-.005v.01h-.005v-.01h-.01v.005h-.005v.01h-.005v.01h-.005v.005h-.005v.005h-.005v.005h-.005v.01h-.01v.005h-.005v.01h-.005v.005h-.005v.005h-.005v.016h-.005v.005h-.005v.005h-.005v.005h-.005v.005h-.01v.01h-.005v.005h-.005v.005h-.005v.01h-.005v.005h-.01v.005h-.005v.005h-.005v.01h-.005v.01h-.005v.005h-.005v.005h-.01v.005h-.005v.005h-.005v.01h-.005v.005h-.005v.01h-.005v.005h-.005v.005h-.005v.005h-.005v.005h-.01v.005c-.005 0-.005.005-.005.005l-.005.005l-.005.005v.01h-.005v.005h-.005v.005h-.005v.005h-.005l-.01.01v.005c-.01.005-.01.01-.021.021c0 0-.01.01-.016.01c-.016.01-.036.031-.052.047c-.01.005-.021.016-.031.021q-.031.03-.063.052c-.031.031-.063.052-.099.083h-.005l-.245.214h-.005c-.224.198-.49.453-.792.755l-.026.026c-1.813 1.875-4.672 5.786-4.969 12.104c-.031.521-.026 1.031.005 1.526v.01c.146 2.49.927 4.615 1.906 6.344c.385.688.807 1.313 1.234 1.875c1.469 1.938 2.969 3.089 3.349 3.37c.589 1.359.536 3.703.536 3.703l.859.286s-.177-2.266.068-3.365c.078-.339.255-.63.464-.88c.146-.099.563-.401 1.063-.859c.026-.026.042-.047.063-.073c2.026-1.891 5.813-6.547 4.516-14.13z"/></symbol>
+    <symbol id="i-mdi-docker" viewBox="0 0 24 24"><path fill="currentColor" d="M21.81 10.25c-.06-.04-.56-.43-1.64-.43c-.28 0-.56.03-.84.08c-.21-1.4-1.38-2.11-1.43-2.14l-.29-.17l-.18.27c-.24.36-.43.77-.51 1.19c-.2.8-.08 1.56.33 2.21c-.49.28-1.29.35-1.46.35H2.62c-.34 0-.62.28-.62.63c0 1.15.18 2.3.58 3.38c.45 1.19 1.13 2.07 2 2.61c.98.6 2.59.94 4.42.94c.79 0 1.61-.07 2.42-.22c1.12-.2 2.2-.59 3.19-1.16A8.3 8.3 0 0 0 16.78 16c1.05-1.17 1.67-2.5 2.12-3.65h.19c1.14 0 1.85-.46 2.24-.85c.26-.24.45-.53.59-.87l.08-.24zm-17.96.99h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H3.85c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.43 0h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H6.28c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.47 0h1.75c.1 0 .17-.07.17-.16V9.5c0-.08-.06-.16-.17-.16H8.75c-.08 0-.15.07-.15.16v1.58c0 .09.06.16.15.16m2.44 0h1.77c.08 0 .15-.07.15-.16V9.5c0-.08-.06-.16-.15-.16h-1.77c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16M6.28 9h1.76c.08 0 .16-.09.16-.18V7.25c0-.09-.07-.16-.16-.16H6.28c-.09 0-.16.06-.16.16v1.57c.01.09.07.18.16.18m2.47 0h1.75c.1 0 .17-.09.17-.18V7.25c0-.09-.06-.16-.17-.16H8.75c-.08 0-.15.06-.15.16v1.57c0 .09.06.18.15.18m2.44 0h1.77c.08 0 .15-.09.15-.18V7.25c0-.09-.07-.16-.15-.16h-1.77c-.08 0-.15.06-.15.16v1.57c0 .09.07.18.15.18m0-2.28h1.77c.08 0 .15-.07.15-.16V5c0-.1-.07-.17-.15-.17h-1.77c-.08 0-.15.06-.15.17v1.56c0 .08.07.16.15.16m2.46 4.52h1.76c.09 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16h-1.76c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16"/></symbol>
+    <symbol id="i-cib-next-js" viewBox="0 0 32 32"><path fill="currentColor" d="M23.749 30.005c-.119.063-.109.083.005.025a.3.3 0 0 0 .095-.061c0-.021 0-.021-.1.036m.24-.13c-.057.047-.057.047.011.016a.3.3 0 0 0 .068-.047c0-.027-.016-.021-.079.031m.156-.094c-.057.047-.057.047.011.016a.3.3 0 0 0 .068-.048c0-.025-.016-.02-.079.032m.158-.093c-.057.047-.057.047.009.015c.037-.02.068-.041.068-.047c0-.025-.016-.02-.077.032m.213-.141c-.109.073-.147.12-.047.068c.067-.041.181-.131.161-.131c-.043.016-.079.043-.115.063zM14.953.011c-.073.005-.292.025-.484.041c-4.548.412-8.803 2.86-11.5 6.631a15.8 15.8 0 0 0-2.824 6.989c-.129.88-.145 1.14-.145 2.333c0 1.192.016 1.448.145 2.328c.871 6.011 5.147 11.057 10.943 12.927c1.043.333 2.136.563 3.381.704c.484.052 2.577.052 3.061 0c2.152-.24 3.969-.771 5.767-1.688c.276-.14.328-.177.291-.208a341 341 0 0 1-2.609-3.495l-2.557-3.453l-3.203-4.745a416 416 0 0 0-3.229-4.744c-.011 0-.025 2.109-.031 4.681c-.011 4.505-.011 4.688-.068 4.792a.57.57 0 0 1-.276.287c-.099.047-.188.057-.661.057h-.541l-.141-.088a.6.6 0 0 1-.208-.229l-.068-.141l.005-6.271l.011-6.271l.099-.125a.8.8 0 0 1 .229-.187c.131-.063.183-.073.724-.073c.635 0 .74.025.907.208a603 603 0 0 1 3.859 5.812c2.079 3.152 4.917 7.453 6.312 9.563l2.537 3.839l.125-.083a16.4 16.4 0 0 0 3.285-2.885a15.94 15.94 0 0 0 3.767-8.177c.129-.88.145-1.141.145-2.333s-.016-1.448-.145-2.328C30.985 7.668 26.709 2.622 20.913.751a17 17 0 0 0-3.328-.697c-.303-.031-2.371-.068-2.631-.041zM21.5 9.688a.62.62 0 0 1 .317.364c.027.084.032 1.823.027 5.74l-.011 5.624l-.989-1.52l-.995-1.521v-4.083c0-2.647.011-4.131.025-4.204a.67.67 0 0 1 .313-.395c.124-.063.172-.068.667-.068c.463 0 .541.005.645.063z"/></symbol>
+    <symbol id="i-mdi-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></symbol>
+    <symbol id="i-lucide-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"/></symbol>
+    <symbol id="i-lucide-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></symbol>
+    <symbol id="i-mdi-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/></symbol>
+    <symbol id="i-mdi-email" viewBox="0 0 24 24"><path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></symbol>
+    <symbol id="i-mdi-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></symbol>
+    <symbol id="i-mdi-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></symbol>
+    <symbol id="i-lucide-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12l7-7l7 7m-7 7V5"/></symbol>
+  </svg>
+
   <!-- Header -->
   <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
     <div class="container">
@@ -125,7 +164,7 @@
               class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
               type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
               aria-label="Open menu">
-              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
+              <span class="iconify menu-icon fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-solar-hamburger-menu-line-duotone"></use></svg></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end p-4">
               <div class="d-flex flex-column gap-6">
@@ -193,7 +232,7 @@
               <div>
                 <span
                   class="badge text-dark bg-light-gray border rounded-pill hstack gap-2 fs-7 px-3 py-2 fw-normal d-inline-flex text-wrap text-start">
-                  <iconify-icon icon="lucide:map-pin" class="text-primary fs-5 flex-shrink-0"></iconify-icon> IT &amp; digital
+                  <span class="iconify text-primary fs-5 flex-shrink-0"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-map-pin"></use></svg></span> IT &amp; digital
                   marketing, Pollachi
                 </span>
               </div>
@@ -208,7 +247,7 @@
                 <li>
                   <a href="/services/seo/" class="hstack gap-3 text-dark text-decoration-none">
                     <span class="round-36 rounded-circle bg-light-gray text-primary hstack justify-content-center flex-shrink-0">
-                      <iconify-icon icon="lucide:search" class="fs-6"></iconify-icon>
+                      <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-search"></use></svg></span>
                     </span>
                     <span class="fs-5"><span class="fw-bold">Not showing up on Google?</span>
                       <span class="text-opacity-70 text-dark">SEO and search-ready websites.</span></span>
@@ -217,7 +256,7 @@
                 <li>
                   <a href="/services/meta-ads/" class="hstack gap-3 text-dark text-decoration-none">
                     <span class="round-36 rounded-circle bg-light-gray text-primary hstack justify-content-center flex-shrink-0">
-                      <iconify-icon icon="lucide:megaphone" class="fs-6"></iconify-icon>
+                      <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-megaphone"></use></svg></span>
                     </span>
                     <span class="fs-5"><span class="fw-bold">Ads not bringing enquiries?</span>
                       <span class="text-opacity-70 text-dark">Meta ads that track every lead.</span></span>
@@ -226,7 +265,7 @@
                 <li>
                   <a href="/services/mobile-app-development/" class="hstack gap-3 text-dark text-decoration-none">
                     <span class="round-36 rounded-circle bg-light-gray text-primary hstack justify-content-center flex-shrink-0">
-                      <iconify-icon icon="lucide:smartphone" class="fs-6"></iconify-icon>
+                      <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-smartphone"></use></svg></span>
                     </span>
                     <span class="fs-5"><span class="fw-bold">Customers still ordering by phone?</span>
                       <span class="text-opacity-70 text-dark">Apps they keep using.</span></span>
@@ -235,7 +274,7 @@
                 <li>
                   <a href="/services/custom-software-development/" class="hstack gap-3 text-dark text-decoration-none">
                     <span class="round-36 rounded-circle bg-light-gray text-primary hstack justify-content-center flex-shrink-0">
-                      <iconify-icon icon="lucide:sheet" class="fs-6"></iconify-icon>
+                      <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-sheet"></use></svg></span>
                     </span>
                     <span class="fs-5"><span class="fw-bold">Team stuck in spreadsheets?</span>
                       <span class="text-opacity-70 text-dark">Software that does the busywork.</span></span>
@@ -245,13 +284,12 @@
               <div class="d-flex flex-wrap align-items-center gap-4 mb-4">
                 <a href="/contact/" class="btn">
                   <span class="btn-text">Get a Free Quote</span>
-                  <iconify-icon icon="lucide:arrow-up-right"
-                    class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                  <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                 </a>
                 <a href="/projects/"
                   class="d-inline-flex align-items-center gap-3 text-dark text-decoration-none fw-medium">
                   <span class="border border-dark text-dark round-45 rounded-circle hstack justify-content-center">
-                    <iconify-icon icon="solar:play-outline" class="fs-6"></iconify-icon>
+                    <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-solar-play-outline"></use></svg></span>
                   </span>
                   View Our Work
                 </a>
@@ -282,9 +320,9 @@
                 style="z-index: 2; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px);">
                 <a href="#reviews" class="card-body p-4 rounded-4 d-block text-decoration-none">
                   <span class="hstack gap-2 mb-3">
-                    <iconify-icon icon="logos:google-icon" class="fs-6"></iconify-icon>
+                    <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-logos-google-icon"></use></svg></span>
                     <span class="hstack gap-1 text-primary" role="img" aria-label="Rated 4.9 out of 5">
-                      <iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon>
+                      <span class="iconify"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span>
                     </span>
                   </span>
                   <span class="hero-float-title d-block mb-0">4.9 Google rating</span>
@@ -299,7 +337,7 @@
                   class="card-body p-4 p-xl-5 bg-white rounded-4 d-flex align-items-center gap-4 gap-xl-5 flex-wrap flex-sm-nowrap">
                   <div class="d-flex flex-column gap-3">
                     <span class="bg-light-gray text-primary round-45 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:maximize" class="fs-6"></iconify-icon>
+                      <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-maximize"></use></svg></span>
                     </span>
                     <div>
                       <p class="mb-0 fs-4 fw-bold text-dark">50+</p>
@@ -308,7 +346,7 @@
                   </div>
                   <div class="d-flex flex-column gap-3">
                     <span class="bg-light-gray text-primary round-45 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:star" class="fs-6"></iconify-icon>
+                      <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-star"></use></svg></span>
                     </span>
                     <div>
                       <p class="mb-0 fs-4 fw-bold text-dark">4.9/5</p>
@@ -317,7 +355,7 @@
                   </div>
                   <div class="d-flex flex-column gap-3">
                     <span class="bg-light-gray text-primary round-45 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:layout-grid" class="fs-6"></iconify-icon>
+                      <span class="iconify fs-6"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-layout-grid"></use></svg></span>
                     </span>
                     <div>
                       <p class="mb-0 fs-4 fw-bold text-dark">3+</p>
@@ -382,8 +420,7 @@
               </div>
               <a href="/about/" class="btn" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
                 <span class="btn-text">Who we are</span>
-                <iconify-icon icon="lucide:arrow-up-right"
-                  class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
               </a>
             </div>
 
@@ -436,7 +473,7 @@
                   <div class="portfolio-overlay">
                     <a href="/projects/biotrack-lims/" aria-label="View the BioTrack LIMS case study"
                       class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                      <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -462,7 +499,7 @@
                   <div class="portfolio-overlay">
                     <a href="/projects/learnsphere-edtech/" aria-label="View the LearnSphere EdTech case study"
                       class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                      <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -488,7 +525,7 @@
                   <div class="portfolio-overlay">
                     <a href="/projects/global-freight-logistics/" aria-label="View the Global Freight Logistics case study"
                       class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                      <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -514,7 +551,7 @@
                   <div class="portfolio-overlay">
                     <a href="/projects/urban-lifestyle/" aria-label="View the Urban Lifestyle case study"
                       class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                      <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -540,7 +577,7 @@
                   <div class="portfolio-overlay">
                     <a href="/projects/prime-real-estate/" aria-label="View the Prime Real Estate case study"
                       class="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center">
-                      <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                      <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -684,8 +721,7 @@
                   <a href="/projects/" class="btn border border-white border-opacity-25" data-aos="fade-up"
                     data-aos-delay="300" data-aos-duration="1000">
                     <span class="btn-text">See our Work</span>
-                    <iconify-icon icon="lucide:arrow-up-right"
-                      class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                    <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                   </a>
                 </div>
               </div>
@@ -726,7 +762,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:layout-template" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-layout-template"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/web-development/">Web development</a></h3>
@@ -739,7 +775,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:blocks" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-blocks"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/custom-software-development/">Custom software development</a></h3>
@@ -752,7 +788,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:smartphone" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-smartphone"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/mobile-app-development/">Mobile app development</a></h3>
@@ -765,7 +801,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:pen-tool" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-pen-tool"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/ui-ux-design/">UI/UX design</a></h3>
@@ -778,7 +814,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:wrench" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-wrench"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/maintenance-support/">Maintenance &amp; support</a></h3>
@@ -791,7 +827,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:search" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-search"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/seo/">SEO analysis &amp; optimisation</a></h3>
@@ -804,7 +840,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:megaphone" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-megaphone"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/meta-ads/">Meta ads</a></h3>
@@ -817,7 +853,7 @@
             <div class="card h-100 border" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
                 <span class="round-64 rounded-circle bg-primary hstack justify-content-center flex-shrink-0">
-                  <iconify-icon icon="lucide:clapperboard" class="fs-8 text-dark"></iconify-icon>
+                  <span class="iconify fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-clapperboard"></use></svg></span>
                 </span>
                 <div class="d-flex flex-column gap-3">
                   <h3 class="mb-0 fs-9"><a class="service-card-link stretched-link" href="/services/video-editing/">Video editing</a></h3>
@@ -830,8 +866,7 @@
           <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <a href="/services/" class="btn">
               <span class="btn-text">All services</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+              <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
             </a>
           </div>
         </div>
@@ -860,7 +895,7 @@
                     <h2 class="mb-0">What clients say on Google</h2>
                     <div class="hstack gap-3 flex-wrap">
                       <span class="h3 mb-0">4.9</span>
-                      <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon></span>
+                      <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span></span>
                       <span class="fs-5">from 7 Google reviews</span>
                     </div>
                   </div>
@@ -872,7 +907,7 @@
           <div class="col-md-6 mb-7">
             <figure class="card h-100 border mb-0" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
-                <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon></span>
+                <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span></span>
                 <blockquote class="mb-0 fs-5 text-dark">
                   <p class="mb-0">&ldquo;Had an exceptional experience working with Fodavin Technologies! The team is highly professional, responsive, and truly understands client requirements. They delivered excellent quality work on time and communication was seamless throughout. Highly recommend their services for anyone looking for reliable IT and web design solutions.&rdquo;</p>
                 </blockquote>
@@ -889,7 +924,7 @@
           <div class="col-md-6 mb-7">
             <figure class="card h-100 border mb-0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
-                <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon></span>
+                <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span></span>
                 <blockquote class="mb-0 fs-5 text-dark">
                   <p class="mb-0">&ldquo;Great experience with this IT company! The team is professional, friendly, and very responsive. They understand client requirements clearly and deliver quality work on time. I really appreciate their communication, technical expertise, and commitment to customer satisfaction. Highly recommended for software development, web development, mobile app development , video editing , Digital marketing, SEO optimization and other IT solutions!&rdquo;</p>
                 </blockquote>
@@ -906,7 +941,7 @@
           <div class="col-md-6 mb-7">
             <figure class="card h-100 border mb-0" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
-                <span class="hstack gap-1" role="img" aria-label="Rated 4 out of 5"><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-line-duotone" class="fs-6 text-primary"></iconify-icon></span>
+                <span class="hstack gap-1" role="img" aria-label="Rated 4 out of 5"><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-line-duotone"></use></svg></span></span>
                 <blockquote class="mb-0 fs-5 text-dark">
                   <p class="mb-0">&ldquo;I had a really great experience with this IT company. From the initial discussion to the final delivery, the entire process was handled in a very professional and organized manner. … What impressed me most was their technical knowledge, creativity, and attention to detail. They maintained good communication throughout the project and were always open to suggestions, feedback, and changes. …&rdquo;</p>
                 </blockquote>
@@ -923,7 +958,7 @@
           <div class="col-md-6 mb-7">
             <figure class="card h-100 border mb-0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <div class="card-body d-flex flex-column gap-5 p-7">
-                <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon><iconify-icon icon="solar:star-bold" class="fs-6 text-primary"></iconify-icon></span>
+                <span class="hstack gap-1" role="img" aria-label="Rated 5 out of 5"><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span><span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-solar-star-bold"></use></svg></span></span>
                 <blockquote class="mb-0 fs-5 text-dark">
                   <p class="mb-0">&ldquo;I recently had a fantastic experience getting my mom's website logo designed by Fodavin. The team was professional, creative, and really listened to our ideas. They delivered a logo that perfectly captures my mom's brand identity. The whole process was smooth and enjoyable, making it a great choice for anyone looking for quality design work. Highly recommend!&rdquo;</p>
                 </blockquote>
@@ -941,8 +976,7 @@
           <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <a href="https://www.google.com/maps/search/?api=1&amp;query=Fodavin+Technologies+Pollachi" class="btn" target="_blank" rel="noopener">
               <span class="btn-text">Read all reviews on Google</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+              <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
             </a>
           </div>
         </div>
@@ -1079,40 +1113,34 @@
                       <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">1 - 5 Pages</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Keyword & SEO Optimization — FREE</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Mobile Responsive & Speed Optimization</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Delivery time 7-10 days</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Hosting & Domain – Client Should Pay</h6>
                         </li>
                       </ul>
                     </div>
                     <a href="/contact/" class="btn w-100 justify-content-center">
                       <span class="btn-text">Select Package</span>
-                      <iconify-icon icon="lucide:arrow-up-right"
-                        class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                      <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -1123,8 +1151,7 @@
                     <div class="d-flex flex-column gap-6">
                       <div class="hstack gap-3">
                         <h5 class="mb-0 fw-medium">PREMIUM</h5>
-                        <span class="badge text-bg-dark hstack gap-2"><iconify-icon icon="lucide:flame"
-                            class="fs-5"></iconify-icon>Most popular</span>
+                        <span class="badge text-bg-dark hstack gap-2"><span class="iconify fs-5"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-flame"></use></svg></span>Most popular</span>
                       </div>
                       <div class="hstack gap-2">
                         <h3 class="mb-0">₹15,000</h3>
@@ -1136,40 +1163,34 @@
                       <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">1 – 10 Pages</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Technical SEO & Pro Mail Setup — FREE</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Social Media Integration</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Delivery time 7-10 days</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Hosting & Domain – Client Should Pay</h6>
                         </li>
                       </ul>
                     </div>
                     <a href="/contact/" class="btn w-100 justify-content-center">
                       <span class="btn-text">Select Package</span>
-                      <iconify-icon icon="lucide:arrow-up-right"
-                        class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                      <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -1190,34 +1211,29 @@
                       <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Custom Pages & Store Design</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">1 Yr Hosting, Domain, SSL — FREE</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Product & Order Management System</h6>
                         </li>
                         <li class="hstack gap-3">
                           <span
-                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><iconify-icon
-                              icon="lucide:check" class="fs-6 text-dark"></iconify-icon></span>
+                            class="round-32 rounded-circle bg-primary flex-shrink-0 hstack justify-content-center"><span class="iconify fs-6 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-check"></use></svg></span></span>
                           <h6 class="mb-0 fw-normal">Payment Gateway Integration</h6>
                         </li>
                       </ul>
                     </div>
                     <a href="/contact/" class="btn w-100 justify-content-center">
                       <span class="btn-text">Select Package</span>
-                      <iconify-icon icon="lucide:arrow-up-right"
-                        class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                      <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                     </a>
                   </div>
                 </div>
@@ -1229,67 +1245,67 @@
             <div class="marquee w-100 d-flex align-items-center overflow-hidden">
               <div class="marquee-content d-flex align-items-center gap-8">
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:react" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-react"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">REACT</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:nodejs" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-nodejs"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">NODE.JS</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:language-python" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-language-python"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">PYTHON</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:aws" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-aws"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">AWS</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="cib:mongodb" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-cib-mongodb"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">MONGODB</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:docker" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-docker"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">DOCKER</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="cib:next-js" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-cib-next-js"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">NEXT.JS</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:github" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-github"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">GITHUB</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:react" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-react"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">REACT</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:nodejs" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-nodejs"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">NODE.JS</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:language-python" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-language-python"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">PYTHON</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:aws" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-aws"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">AWS</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="cib:mongodb" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-cib-mongodb"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">MONGODB</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:docker" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-docker"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">DOCKER</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="cib:next-js" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-cib-next-js"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">NEXT.JS</span>
                 </div>
                 <div class="marquee-tag hstack gap-3 justify-content-center px-4">
-                  <iconify-icon icon="mdi:github" class="display-6 text-dark text-opacity-25"></iconify-icon>
+                  <span class="iconify display-6 text-dark text-opacity-25"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-github"></use></svg></span>
                   <span class="fs-2 text-dark text-opacity-25 fw-bold" style="letter-spacing: 2px;">GITHUB</span>
                 </div>
               </div>
@@ -1546,8 +1562,7 @@
                 <input type="text" name="company_website" class="fodavin-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <button type="submit" class="btn w-100 justify-content-center">
                   <span class="btn-text">Submit message</span>
-                  <iconify-icon icon="lucide:arrow-up-right"
-                    class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                  <span class="iconify btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up-right"></use></svg></span>
                 </button>
               </form>
             </div>
@@ -1572,16 +1587,16 @@
             </div>
             <div class="d-flex flex-column gap-2">
               <a href="tel:+918438877646" class="footer-link hstack gap-3">
-                <iconify-icon icon="lucide:phone" class="fs-6 text-primary"></iconify-icon>+91 84388 77646
+                <span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-phone"></use></svg></span>+91 84388 77646
               </a>
               <a href="tel:+919487256018" class="footer-link hstack gap-3">
-                <iconify-icon icon="lucide:phone" class="fs-6 text-primary"></iconify-icon>+91 94872 56018
+                <span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-phone"></use></svg></span>+91 94872 56018
               </a>
               <a href="mailto:contact@fodavin.in" class="footer-link hstack gap-3">
-                <iconify-icon icon="lucide:mail" class="fs-6 text-primary"></iconify-icon>contact@fodavin.in
+                <span class="iconify fs-6 text-primary"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-mail"></use></svg></span>contact@fodavin.in
               </a>
               <a href="https://www.google.com/maps/search/?api=1&amp;query=Sree+Saraswathi+Thyagaraja+College+Palani+Road+Thippampatti+Pollachi+642110" class="footer-link hstack gap-3 align-items-start" target="_blank" rel="noopener">
-                <iconify-icon icon="lucide:map-pin" class="fs-6 text-primary flex-shrink-0 mt-1"></iconify-icon>
+                <span class="iconify fs-6 text-primary flex-shrink-0 mt-1"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-map-pin"></use></svg></span>
                 <address class="mb-0">Sree Saraswathi Thyagaraja College (STC), Palani Road,
                   Thippampatti, Pollachi, Tamil Nadu 642110</address>
               </a>
@@ -1642,16 +1657,16 @@
           </form>
           <div class="hstack gap-2 flex-wrap">
             <a href="https://wa.me/918438877646" class="footer-social" aria-label="WhatsApp" target="_blank" rel="noopener">
-              <iconify-icon icon="mdi:whatsapp" class="fs-7"></iconify-icon>
+              <span class="iconify fs-7"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-whatsapp"></use></svg></span>
             </a>
             <a href="mailto:contact@fodavin.in" class="footer-social" aria-label="Email">
-              <iconify-icon icon="mdi:email" class="fs-7"></iconify-icon>
+              <span class="iconify fs-7"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-email"></use></svg></span>
             </a>
             <a href="https://www.linkedin.com/company/fodavin-technologies/" class="footer-social" aria-label="LinkedIn" target="_blank" rel="noopener">
-              <iconify-icon icon="mdi:linkedin" class="fs-7"></iconify-icon>
+              <span class="iconify fs-7"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-linkedin"></use></svg></span>
             </a>
             <a href="https://www.instagram.com/fodavin/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">
-              <iconify-icon icon="mdi:instagram" class="fs-7"></iconify-icon>
+              <span class="iconify fs-7"><svg aria-hidden="true" focusable="false"><use href="#i-mdi-instagram"></use></svg></span>
             </a>
           </div>
         </div>
@@ -1694,7 +1709,7 @@
   <div class="get-template hstack gap-2">
     <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
       id="scrollToTopBtn">
-      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
+      <span class="iconify fs-7 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-lucide-arrow-up"></use></svg></span>
     </button>
   </div>
 
@@ -1706,8 +1721,6 @@
   <script src="/assets/js/custom.js" defer></script>
   <script src="/assets/js/fodavin-config.js" defer></script>
   <script src="/assets/js/fodavin-forms.js" defer></script>
-  <!-- solar icons -->
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js" defer></script>
 </body>
 
 </html>
