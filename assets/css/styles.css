@@ -19983,6 +19983,283 @@ ul {
   opacity: 1;
 }
 
+/* Desktop sub-menus.
+   A parent keeps its own link (Services -> /services/) and gets a chevron
+   button laid over the right end of its pill. The panel opens on hover, on
+   keyboard focus inside the item, or when the chevron sets .is-open. */
+.header-nav {
+  position: relative;
+}
+
+.header-nav .nav-has-sub {
+  position: relative;
+}
+
+.header-nav .nav-has-sub.nav-mega {
+  position: static;
+}
+
+.header-nav .nav-has-sub > .header-link-inline {
+  padding-right: 36px;
+}
+
+.header-nav .nav-sub-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-nav .nav-has-sub.nav-mega > .nav-sub-toggle {
+  /* static parent: anchor the chevron to the pill instead */
+  position: relative;
+  top: auto;
+  right: auto;
+  margin-left: -32px;
+  margin-right: 10px;
+  transform: none;
+  vertical-align: middle;
+}
+
+.header-nav .nav-has-sub > .header-link-inline.active + .nav-sub-toggle {
+  color: var(--bs-dark);
+}
+
+.header.fixed-header .header-nav .nav-has-sub > .header-link-inline.active + .nav-sub-toggle {
+  color: var(--bs-white);
+}
+
+.header-nav .nav-sub-toggle:focus-visible {
+  outline: 2px solid var(--bs-dark);
+  outline-offset: 1px;
+}
+
+.header-nav .nav-sub-toggle svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-nav .nav-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 100;
+  padding-top: 14px; /* hover bridge between the pill and the panel */
+  min-width: 260px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.header-nav .nav-mega .nav-panel {
+  width: 920px;
+}
+
+.header-nav .nav-has-sub:hover > .nav-panel,
+.header-nav .nav-has-sub:focus-within > .nav-panel,
+.header-nav .nav-has-sub.is-open > .nav-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s;
+}
+
+/* Escape closes a panel even while focus is still inside the item */
+.header-nav .nav-has-sub.is-dismissed > .nav-panel {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-nav .nav-has-sub:hover > .nav-sub-toggle svg,
+.header-nav .nav-has-sub.is-open > .nav-sub-toggle svg {
+  transform: rotate(180deg);
+}
+
+.header-nav .nav-has-sub.is-dismissed > .nav-sub-toggle svg {
+  transform: none;
+}
+
+.nav-panel-inner {
+  padding: 24px;
+  border-radius: 20px;
+  background-color: var(--bs-white);
+  border: 1px solid rgba(31, 42, 46, 0.08);
+  box-shadow: 0 24px 60px rgba(31, 42, 46, 0.16);
+  text-align: left;
+}
+
+.nav-mega-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.nav-col-title {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5c6669;
+}
+
+.nav-col-title-gap {
+  margin-top: 16px;
+}
+
+.nav-panel-inner ul a {
+  display: block;
+  margin: 0 -10px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--bs-dark);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.nav-panel-inner ul a small {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5c6669;
+}
+
+.nav-panel-inner ul a:hover,
+.nav-panel-inner ul a:focus-visible {
+  background-color: rgba(var(--bs-primary-rgb), 0.18);
+}
+
+.nav-panel-inner ul a[aria-current="page"] {
+  background-color: rgba(var(--bs-primary-rgb), 0.3);
+}
+
+.nav-panel-all {
+  display: inline-block;
+  margin-top: 16px;
+  padding-top: 14px;
+  width: 100%;
+  border-top: 1px solid rgba(31, 42, 46, 0.08);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bs-dark);
+  text-decoration: none;
+}
+
+.nav-panel-all:hover {
+  text-decoration: underline;
+}
+
+/* Desktop call to action beside the menu */
+.header-cta {
+  align-items: center;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-cta:hover {
+  background-color: #000;
+  color: var(--bs-primary);
+}
+
+/* Mobile menu: scrolls inside the screen, sub-lists fold open */
+.header .mobile-menu {
+  width: min(360px, calc(100vw - 32px));
+  max-height: calc(100vh - 110px);
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-radius: 20px;
+}
+
+.mobile-sub-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mobile-sub-toggle {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(31, 42, 46, 0.06);
+  color: var(--bs-dark);
+}
+
+.mobile-sub-toggle svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-sub-toggle:not(.collapsed) svg {
+  transform: rotate(180deg);
+}
+
+.mobile-sub {
+  margin: 6px 0 4px;
+  padding: 4px 0 4px 16px;
+  border-left: 2px solid var(--bs-primary);
+}
+
+.mobile-sub .nav-col-title {
+  margin: 12px 0 4px;
+}
+
+.mobile-sub .nav-col-title:first-child {
+  margin-top: 4px;
+}
+
+.mobile-sub ul a {
+  display: block;
+  padding: 7px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--bs-dark);
+  text-decoration: none;
+}
+
+.mobile-sub ul a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--bs-primary);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-nav .nav-panel,
+  .header-nav .nav-sub-toggle svg,
+  .mobile-sub-toggle svg {
+    transition: none;
+  }
+}
+
 /* ------------------------------------------------------------------
    Footer
 ------------------------------------------------------------------ */

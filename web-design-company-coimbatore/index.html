@@ -226,10 +226,10 @@
   <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/logos/favicon-48.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/logos/favicon-192.png" />
   <link rel="apple-touch-icon" href="/assets/images/logos/apple-touch-icon.png" />
-  <link rel="stylesheet" href="/assets/libs/aos-master/dist/aos.css?v=20261017" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="/assets/libs/aos-master/dist/aos.css?v=20261017"></noscript>
+  <link rel="stylesheet" href="/assets/libs/aos-master/dist/aos.css?v=20261018" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/assets/libs/aos-master/dist/aos.css?v=20261018"></noscript>
   <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20261017" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261018" />
 </head>
 
 <body>
@@ -266,34 +266,131 @@
           </a>
         </div>
 
-        <!-- Desktop navigation: revealed from xl up, replaced by the hamburger below that -->
+        <!-- Desktop navigation: revealed from xl up, replaced by the hamburger below that.
+             Sub-menus open on hover, on keyboard focus, or with the chevron button. -->
         <nav class="header-nav d-none d-xl-block" aria-label="Primary">
           <ul class="header-menu-inline list-unstyled mb-0 d-flex align-items-center gap-1">
             <li><a href="/" data-nav="home" class="header-link-inline">Home</a></li>
             <li><a href="/about/" data-nav="about" class="header-link-inline">About</a></li>
-            <li><a href="/projects/" data-nav="projects" class="header-link-inline">Projects</a></li>
-            <li><a href="/services/" data-nav="services" class="header-link-inline">Services</a></li>
+            <li class="nav-has-sub nav-mega">
+              <a href="/services/" data-nav="services" class="header-link-inline">Services</a>
+              <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-services">
+                <span class="visually-hidden">Show services menu</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="nav-panel" id="nav-services">
+                <div class="nav-panel-inner">
+                  <div class="nav-mega-grid">
+                    <div>
+                      <p class="nav-col-title">IT services</p>
+                      <ul class="list-unstyled mb-0">
+                        <li><a href="/services/web-development/">Website design &amp; development</a></li>
+                        <li><a href="/services/ecommerce-website-development/">Ecommerce websites</a></li>
+                        <li><a href="/services/custom-software-development/">Custom software</a></li>
+                        <li><a href="/services/mobile-app-development/">Mobile apps</a></li>
+                        <li><a href="/services/ui-ux-design/">UI/UX design</a></li>
+                        <li><a href="/services/maintenance-support/">Website maintenance &amp; AMC</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p class="nav-col-title">Digital marketing</p>
+                      <ul class="list-unstyled mb-0">
+                        <li><a href="/services/seo/">SEO services</a></li>
+                        <li><a href="/services/google-business-profile/">Google Business Profile</a></li>
+                        <li><a href="/services/social-media-marketing/">Social media marketing</a></li>
+                        <li><a href="/services/meta-ads/">Meta ads</a></li>
+                        <li><a href="/services/video-editing/">Video editing</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p class="nav-col-title">Industry software</p>
+                      <ul class="list-unstyled mb-0">
+                        <li><a href="/billing-erp-software/">Billing &amp; ERP software</a></li>
+                        <li><a href="/school-management-software/">School management software</a></li>
+                        <li><a href="/hospital-clinic-software/">Hospital &amp; clinic software</a></li>
+                        <li><a href="/real-estate-website-development/">Real estate websites</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p class="nav-col-title">Service areas</p>
+                      <ul class="list-unstyled mb-0">
+                        <li><a href="/web-design-company-pollachi/">Web design in Pollachi</a></li>
+                        <li><a href="/web-design-udumalpet/">Web design in Udumalpet</a></li>
+                        <li><a href="/web-design-company-coimbatore/">Web design in Coimbatore</a></li>
+                        <li><a href="/digital-marketing-company-pollachi/">Digital marketing in Pollachi</a></li>
+                        <li><a href="/digital-marketing-tiruppur/">Digital marketing in Tiruppur</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="/services/" class="nav-panel-all">View all services <span aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-has-sub">
+              <a href="/courses/" data-nav="courses" class="header-link-inline">Courses</a>
+              <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-courses">
+                <span class="visually-hidden">Show courses menu</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="nav-panel" id="nav-courses">
+                <div class="nav-panel-inner">
+                  <p class="nav-col-title">Courses</p>
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="/courses/web-development-course/">Web Development</a></li>
+                    <li><a href="/courses/mern-stack-course/">MERN Stack</a></li>
+                    <li><a href="/courses/java-full-stack-course/">Java Full Stack</a></li>
+                    <li><a href="/courses/python-full-stack-course/">Python Full Stack</a></li>
+                    <li><a href="/courses/data-analytics-course/">Data Analytics</a></li>
+                    <li><a href="/courses/vibe-coding-course/">Vibe Coding</a></li>
+                  </ul>
+                  <p class="nav-col-title nav-col-title-gap">Careers</p>
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="/internship-pollachi/">Internship in Pollachi</a></li>
+                  </ul>
+                  <a href="/courses/" class="nav-panel-all">View all courses <span aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-has-sub">
+              <a href="/projects/" data-nav="projects" class="header-link-inline">Projects</a>
+              <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-projects">
+                <span class="visually-hidden">Show projects menu</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="nav-panel" id="nav-projects">
+                <div class="nav-panel-inner">
+                  <p class="nav-col-title">Recent projects</p>
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="/projects/sathya-jewellers/">Sathya Jewellers <small>Website &amp; billing software</small></a></li>
+                    <li><a href="/projects/divya-beauty-parlour/">Divya's Beauty Parlour <small>Salon booking website</small></a></li>
+                  </ul>
+                  <a href="/projects/" class="nav-panel-all">View all projects <span aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+            </li>
             <li><a href="/contact/" data-nav="contact" class="header-link-inline">Contact</a></li>
           </ul>
         </nav>
 
         <div class="d-flex align-items-center gap-4">
 
+          <a href="/contact/" class="header-cta d-none d-xl-inline-flex">Get a quote</a>
+
           <!-- Hamburger: small screens only -->
           <div class="btn-group d-xl-none">
             <button
               class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
-              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"
               aria-label="Open menu">
               <span class="iconify menu-icon fs-8 text-dark"><svg aria-hidden="true" focusable="false"><use href="#i-solar-hamburger-menu-line-duotone"></use></svg></span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end p-4">
+            <div class="dropdown-menu dropdown-menu-end mobile-menu p-4">
               <div class="d-flex flex-column gap-6">
                 <div class="hstack justify-content-between border-bottom pb-6">
                   <p class="mb-0 fs-5 text-dark">Menu</p>
-                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close menu"></button>
                 </div>
-                <div class="d-flex flex-column gap-3">
+                <nav aria-label="Mobile">
                   <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
                     <li class="header-item">
                       <a href="/" data-nav="home"
@@ -308,16 +405,100 @@
                           class="img-fluid animate-spin">About</a>
                     </li>
                     <li class="header-item">
-                      <a href="/projects/" data-nav="projects"
-                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="/assets/images/svgs/secondary-leaf.svg" alt="" aria-hidden="true" width="20" height="20"
-                          class="img-fluid animate-spin">Projects</a>
+                      <div class="mobile-sub-row">
+                        <a href="/services/" data-nav="services"
+                          class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                            src="/assets/images/svgs/secondary-leaf.svg" alt="" aria-hidden="true" width="20" height="20"
+                            class="img-fluid animate-spin">Services</a>
+                        <button type="button" class="mobile-sub-toggle collapsed" data-bs-toggle="collapse"
+                          data-bs-target="#m-services" aria-expanded="false" aria-controls="m-services">
+                          <span class="visually-hidden">Show services menu</span>
+                          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                      </div>
+                      <div class="collapse" id="m-services">
+                        <div class="mobile-sub">
+                          <p class="nav-col-title">IT services</p>
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="/services/web-development/">Website design &amp; development</a></li>
+                            <li><a href="/services/ecommerce-website-development/">Ecommerce websites</a></li>
+                            <li><a href="/services/custom-software-development/">Custom software</a></li>
+                            <li><a href="/services/mobile-app-development/">Mobile apps</a></li>
+                            <li><a href="/services/ui-ux-design/">UI/UX design</a></li>
+                            <li><a href="/services/maintenance-support/">Website maintenance &amp; AMC</a></li>
+                          </ul>
+                          <p class="nav-col-title">Digital marketing</p>
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="/services/seo/">SEO services</a></li>
+                            <li><a href="/services/google-business-profile/">Google Business Profile</a></li>
+                            <li><a href="/services/social-media-marketing/">Social media marketing</a></li>
+                            <li><a href="/services/meta-ads/">Meta ads</a></li>
+                            <li><a href="/services/video-editing/">Video editing</a></li>
+                          </ul>
+                          <p class="nav-col-title">Industry software</p>
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="/billing-erp-software/">Billing &amp; ERP software</a></li>
+                            <li><a href="/school-management-software/">School management software</a></li>
+                            <li><a href="/hospital-clinic-software/">Hospital &amp; clinic software</a></li>
+                            <li><a href="/real-estate-website-development/">Real estate websites</a></li>
+                          </ul>
+                          <p class="nav-col-title">Service areas</p>
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="/web-design-company-pollachi/">Web design in Pollachi</a></li>
+                            <li><a href="/web-design-udumalpet/">Web design in Udumalpet</a></li>
+                            <li><a href="/web-design-company-coimbatore/">Web design in Coimbatore</a></li>
+                            <li><a href="/digital-marketing-company-pollachi/">Digital marketing in Pollachi</a></li>
+                            <li><a href="/digital-marketing-tiruppur/">Digital marketing in Tiruppur</a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </li>
                     <li class="header-item">
-                      <a href="/services/" data-nav="services"
-                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="/assets/images/svgs/secondary-leaf.svg" alt="" aria-hidden="true" width="20" height="20"
-                          class="img-fluid animate-spin">Services</a>
+                      <div class="mobile-sub-row">
+                        <a href="/courses/" data-nav="courses"
+                          class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                            src="/assets/images/svgs/secondary-leaf.svg" alt="" aria-hidden="true" width="20" height="20"
+                            class="img-fluid animate-spin">Courses</a>
+                        <button type="button" class="mobile-sub-toggle collapsed" data-bs-toggle="collapse"
+                          data-bs-target="#m-courses" aria-expanded="false" aria-controls="m-courses">
+                          <span class="visually-hidden">Show courses menu</span>
+                          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                      </div>
+                      <div class="collapse" id="m-courses">
+                        <div class="mobile-sub">
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="/courses/web-development-course/">Web Development</a></li>
+                            <li><a href="/courses/mern-stack-course/">MERN Stack</a></li>
+                            <li><a href="/courses/java-full-stack-course/">Java Full Stack</a></li>
+                            <li><a href="/courses/python-full-stack-course/">Python Full Stack</a></li>
+                            <li><a href="/courses/data-analytics-course/">Data Analytics</a></li>
+                            <li><a href="/courses/vibe-coding-course/">Vibe Coding</a></li>
+                            <li><a href="/internship-pollachi/">Internship in Pollachi</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header-item">
+                      <div class="mobile-sub-row">
+                        <a href="/projects/" data-nav="projects"
+                          class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                            src="/assets/images/svgs/secondary-leaf.svg" alt="" aria-hidden="true" width="20" height="20"
+                            class="img-fluid animate-spin">Projects</a>
+                        <button type="button" class="mobile-sub-toggle collapsed" data-bs-toggle="collapse"
+                          data-bs-target="#m-projects" aria-expanded="false" aria-controls="m-projects">
+                          <span class="visually-hidden">Show projects menu</span>
+                          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                      </div>
+                      <div class="collapse" id="m-projects">
+                        <div class="mobile-sub">
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="/projects/sathya-jewellers/">Sathya Jewellers</a></li>
+                            <li><a href="/projects/divya-beauty-parlour/">Divya's Beauty Parlour</a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </li>
                     <li class="header-item">
                       <a href="/contact/" data-nav="contact"
@@ -326,15 +507,13 @@
                           class="img-fluid animate-spin">Contact</a>
                     </li>
                   </ul>
-
-                </div>
-                <div>
+                </nav>
+                <div class="d-flex flex-column gap-1 border-top pt-6">
                   <a class="text-dark" href="tel:+918438877646">8438877646</a>
-                  <a class="fs-8 text-dark fw-bold"
-                    href="mailto:contact@fodavin.in">contact@fodavin.in</a>
+                  <a class="fs-8 text-dark fw-bold" href="mailto:contact@fodavin.in">contact@fodavin.in</a>
                 </div>
               </div>
-            </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -1054,13 +1233,13 @@
   </div>
 
 
-  <script src="/assets/libs/jquery/dist/jquery.min.js?v=20261017" defer></script>
-  <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js?v=20261017" defer></script>
-  <script src="/assets/libs/owl.carousel/dist/owl.carousel.min.js?v=20261017" defer></script>
-  <script src="/assets/libs/aos-master/dist/aos.js?v=20261017" defer></script>
-  <script src="/assets/js/custom.js?v=20261017" defer></script>
-  <script src="/assets/js/fodavin-config.js?v=20261017" defer></script>
-  <script src="/assets/js/fodavin-forms.js?v=20261017" defer></script>
+  <script src="/assets/libs/jquery/dist/jquery.min.js?v=20261018" defer></script>
+  <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js?v=20261018" defer></script>
+  <script src="/assets/libs/owl.carousel/dist/owl.carousel.min.js?v=20261018" defer></script>
+  <script src="/assets/libs/aos-master/dist/aos.js?v=20261018" defer></script>
+  <script src="/assets/js/custom.js?v=20261018" defer></script>
+  <script src="/assets/js/fodavin-config.js?v=20261018" defer></script>
+  <script src="/assets/js/fodavin-forms.js?v=20261018" defer></script>
 </body>
 
 </html>
