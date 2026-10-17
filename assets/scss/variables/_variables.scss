@@ -106,7 +106,7 @@ $btn-font-size: 18px !default;
 $btn-border-radius-lg: 9px !default;
 
 // Font Family
-$font-family-sans-serif: "Manrope", sans-serif !default;
+$font-family-sans-serif: "Manrope", "Manrope Fallback", sans-serif !default;
 
 // Font Sizes
 $font-sizes: (
