@@ -1,0 +1,36 @@
+# Cloudflare Pages redirects (ignored by GitHub Pages). Format: <from> <to> <status>
+# Old /html/ URLs from before the clean-URL move
+/html                                         /                                          301
+/html/                                        /                                          301
+/html/index.html                              /                                          301
+/html/about-us.html                           /about/                                    301
+/html/services.html                           /services/                                 301
+/html/projects.html                           /projects/                                 301
+/html/contact.html                            /contact/                                  301
+/html/privacy-policy.html                     /privacy-policy/                           301
+/html/terms-and-conditions.html               /terms-and-conditions/                     301
+/html/admin_dashboard.html                    /admin/                                    301
+/html/projects-detail.html                    /projects/                                 301
+/html/project-biotrack-lims.html              /projects/                                 301
+/html/project-learnsphere-edtech.html         /projects/                                 301
+/html/project-global-freight-logistics.html   /projects/                                 301
+/html/project-urban-lifestyle.html            /projects/                                 301
+/html/project-prime-real-estate.html          /projects/                                 301
+/html/courses/index.html                      /courses/                                  301
+/html/courses/web-development.html            /courses/web-development-course/           301
+# Course page replaced by the new course URL
+/courses/web-development                      /courses/web-development-course/           301
+/courses/web-development/                     /courses/web-development-course/           301
+# Removed sample case studies
+/projects/biotrack-lims                       /projects/                                 301
+/projects/biotrack-lims/                      /projects/                                 301
+/projects/learnsphere-edtech                  /projects/                                 301
+/projects/learnsphere-edtech/                 /projects/                                 301
+/projects/global-freight-logistics            /projects/                                 301
+/projects/global-freight-logistics/           /projects/                                 301
+/projects/urban-lifestyle                     /projects/                                 301
+/projects/urban-lifestyle/                    /projects/                                 301
+/projects/prime-real-estate                   /projects/                                 301
+/projects/prime-real-estate/                  /projects/                                 301
+# Home page alias
+/index.html                                   /                                          301

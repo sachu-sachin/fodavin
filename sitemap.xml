@@ -2,102 +2,217 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fodavin.in/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://fodavin.in/services/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fodavin.in/services/web-development/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fodavin.in/services/custom-software-development/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fodavin.in/services/mobile-app-development/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.9</priority>
+    <loc>https://fodavin.in/services/ecommerce-website-development/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fodavin.in/services/ui-ux-design/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.9</priority>
+    <loc>https://fodavin.in/services/google-business-profile/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fodavin.in/services/maintenance-support/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fodavin.in/services/seo/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fodavin.in/services/meta-ads/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/services/mobile-app-development/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/services/seo/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/services/social-media-marketing/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/services/ui-ux-design/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fodavin.in/services/video-editing/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/services/web-development/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/</loc>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fodavin.in/projects/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <loc>https://fodavin.in/courses/data-analytics-course-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/data-analytics-course/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/java-full-stack-course-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/java-full-stack-course/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/mern-stack-course-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/mern-stack-course/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/python-full-stack-course-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/python-full-stack-course/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/vibe-coding-course-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/vibe-coding-course/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/web-development-course-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/courses/web-development-course/</loc>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fodavin.in/about/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/billing-erp-software/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fodavin.in/contact/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/digital-marketing-company-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fodavin.in/projects/biotrack-lims/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <loc>https://fodavin.in/digital-marketing-tiruppur/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/hospital-clinic-software/</loc>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fodavin.in/projects/learnsphere-edtech/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fodavin.in/projects/global-freight-logistics/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fodavin.in/projects/urban-lifestyle/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fodavin.in/projects/prime-real-estate/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <priority>0.7</priority>
+    <loc>https://fodavin.in/internship-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fodavin.in/privacy-policy/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://fodavin.in/projects/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/projects/divya-beauty-parlour/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/projects/sathya-jewellers/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/real-estate-website-development/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/school-management-software/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fodavin.in/terms-and-conditions/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/web-design-company-coimbatore/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/web-design-company-pollachi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fodavin.in/web-design-udumalpet/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
