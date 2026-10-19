@@ -1,4 +1,6 @@
 # Cloudflare Pages redirects (ignored by GitHub Pages). Format: <from> <to> <status>
+# Fodavin Partner Program share links: /ref/FOD-7K2QX -> /?ref=FOD-7K2QX (fodavin-ref.js records the visit)
+/ref/:code                                    /?ref=:code                                302
 # Old /html/ URLs from before the clean-URL move
 /html                                         /                                          301
 /html/                                        /                                          301

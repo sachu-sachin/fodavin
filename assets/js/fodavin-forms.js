@@ -78,6 +78,53 @@
     return topic ? 'Topic: ' + topic + '\n\n' + message : message;
   }
 
+  // --- Partner referrals (see fodavin-ref.js) --------------------------------
+
+  /** Contact-form topics mapped to partner-program service slugs. */
+  var TOPIC_TO_SERVICE = {
+    'Website or ecommerce store': 'website-development',
+    'Custom, billing or ERP software': 'custom-software',
+    'Mobile app': 'mobile-app',
+    'SEO and digital marketing': 'seo',
+    'Something else': 'other'
+  };
+
+  /** { token, code } from a partner link, or a code the visitor typed, or null. */
+  function referral(form) {
+    var ref = window.FODAVIN_REF && window.FODAVIN_REF.get();
+    var typed = value(form, 'referral_code').toUpperCase();
+    var pattern = window.FODAVIN_REF && window.FODAVIN_REF.codePattern;
+    if (typed && pattern && !pattern.test(typed)) typed = '';
+    if (!ref && !typed) return null;
+    return { token: ref ? ref.token : null, code: ref ? ref.code : typed, typed: typed || null };
+  }
+
+  /**
+   * Record a referred enquiry in the Partner Program as well. Runs after the
+   * main backend has accepted the message; failures never affect the visitor.
+   */
+  function sendToPartnerProgram(fields, ref) {
+    if (!cfg.partnerApi || !ref) return;
+    fetch(cfg.partnerApi.replace(/\/+$/, '') + '/api/public/enquiries', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+      body: JSON.stringify({
+        token: ref.token,
+        referralCode: ref.typed,
+        name: fields.name,
+        email: fields.email,
+        phone: fields.phone || undefined,
+        service: TOPIC_TO_SERVICE[fields.topic] || undefined,
+        requirement: fields.message,
+        // The form states that sending it means agreeing to the privacy policy.
+        consent: true,
+        page: fields.page,
+        company_website: fields.company_website
+      })
+    }).catch(function () { /* the enquiry already reached Fodavin */ });
+  }
+
   function looksLikeEmail(v) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
   }
@@ -129,15 +176,26 @@
     clearStatus(form);
     setBusy(form, true);
 
+    var ref = type === 'contact' ? referral(form) : null;
     var payload = {
       action: 'submit',
       type: type,
       name: value(form, 'name'),
       email: value(form, 'email'),
       phone: value(form, 'phone'),
-      message: withTopic(form),
+      // The referral travels inside the message, so the backend needs no new column.
+      message: (ref ? 'Referral code: ' + ref.code + '\n\n' : '') + withTopic(form),
       page: window.location.pathname || '/',
       company_website: value(form, 'company_website') // honeypot
+    };
+    var partnerFields = {
+      name: payload.name,
+      email: payload.email,
+      phone: payload.phone,
+      topic: value(form, 'topic'),
+      message: value(form, 'message'),
+      page: payload.page,
+      company_website: payload.company_website
     };
 
     // No custom Content-Type header: that keeps this a "simple" CORS request,
@@ -150,6 +208,7 @@
       .then(function (data) {
         setBusy(form, false);
         if (data && data.ok) {
+          sendToPartnerProgram(partnerFields, ref);
           form.reset();
           setStatus(form, 'success', type === 'contact'
             ? 'Thanks — your message is with us. We reply within one working day.'

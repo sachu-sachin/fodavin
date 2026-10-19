@@ -12,5 +12,9 @@ window.FODAVIN_CONFIG = {
   formsEndpoint: 'https://script.google.com/macros/s/AKfycbzOghNzGvB74A5zqOoKYGTEW83CEKocnc4ZAxu9IAVCqDOnvgfaEZE1MH9xTw6jzJuE/exec',
 
   // Used as the fallback when formsEndpoint is empty.
-  fallbackEmail: 'enquiry@fodavin.in'
+  fallbackEmail: 'enquiry@fodavin.in',
+
+  // Fodavin Partner Program (referral tracking, see fodavin-ref.js).
+  // Leave empty to switch referral tracking off.
+  partnerApi: 'https://partner.fodavin.in'
 };
